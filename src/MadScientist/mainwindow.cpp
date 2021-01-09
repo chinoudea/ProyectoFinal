@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,3 +14,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_btnNewGame_pressed()
+{
+    qDebug() << "Boton presionado";
+}

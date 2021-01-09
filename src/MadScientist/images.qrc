@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/userInterface">
+        <file alias="bkg_login">resources/images/UserInterface/BG_Login.png</file>
+        <file alias="boton1">resources/images/UserInterface/Btn2.png</file>
+        <file alias="logo">resources/images/UserInterface/game_logo.png</file>
+        <file alias="landing">resources/images/UserInterface/Landing.png</file>
+        <file alias="transparent">resources/images/UserInterface/transparent.png</file>
+    </qresource>
+</RCC>

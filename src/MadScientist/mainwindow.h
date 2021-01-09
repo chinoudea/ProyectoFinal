@@ -15,6 +15,10 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+
+    void on_btnNewGame_pressed();
+
 private:
     Ui::MainWindow *ui;
 };
