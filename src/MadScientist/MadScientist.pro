@@ -9,10 +9,32 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Arma.cpp \
+    Ayuda.cpp \
+    Cientifico.cpp \
+    Enemigo.cpp \
+    Explosivo.cpp \
+    Jugador.cpp \
+    Nivel.cpp \
+    Obstaculo.cpp \
+    Partida.cpp \
+    Personaje.cpp \
+    Proyectil.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    Arma.h \
+    Ayuda.h \
+    Cientifico.h \
+    Enemigo.h \
+    Explosivo.h \
+    Jugador.h \
+    Nivel.h \
+    Obstaculo.h \
+    Partida.h \
+    Personaje.h \
+    Proyectil.h \
     mainwindow.h
 
 FORMS += \
