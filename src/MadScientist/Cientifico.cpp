@@ -13,9 +13,9 @@
 /**
  * @param tipo
  */
-Cientifico::Cientifico(QString name)
+Cientifico::Cientifico(QGraphicsItem *parent)
 {
-    setNombre(name); //Se configura el nombre del cientifico
+    setNombre("name"); //Se configura el nombre del cientifico
     setPixmap(QPixmap(":/scientist/Gun0_Idle0"));
     //setPixmap(QPixmap(":/scientist/Gun0_Walk0"));
     //setPixmap(QPixmap(":/scientist/Gun0_Walk0").copy(160,225,360,275).scaledToHeight(250));

@@ -13,6 +13,11 @@
 /**
  * @param direccion
  */
+Personaje::Personaje(QGraphicsItem *parent)
+{
+
+}
+
 void Personaje::mover() {
     switch (direccion) {
     case 0: //Sin movimiento

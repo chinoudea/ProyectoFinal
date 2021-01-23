@@ -14,7 +14,7 @@ public:
     /*
      * Constructor
      */
-    Cientifico(QString name);
+    Cientifico(QGraphicsItem *parent = 0);
     /**
      * @param tipo
      */

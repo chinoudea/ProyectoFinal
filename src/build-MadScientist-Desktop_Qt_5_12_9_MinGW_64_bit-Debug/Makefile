@@ -236,6 +236,7 @@ Makefile: ..\MadScientist\MadScientist.pro D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mks
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\features\qt_config.prf \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\win32-msvc\qmake.conf \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\features\exclusive_builds.prf \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\common\msvc-version.conf \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\features\toolchain.prf \
@@ -262,6 +263,7 @@ Makefile: ..\MadScientist\MadScientist.pro D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mks
 		..\MadScientist\MadScientist.pro \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\lib\Qt5Widgets.prl \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\lib\Qt5Gui.prl \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\lib\Qt5Sql.prl \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\lib\Qt5Core.prl \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\lib\qtmain.prl
 	$(QMAKE) -o Makefile ..\MadScientist\MadScientist.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -424,6 +426,7 @@ D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\features\qt_functions.prf:
 D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\features\qt_config.prf:
 D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\win32-msvc\qmake.conf:
 D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\features\exclusive_builds.prf:
 D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\common\msvc-version.conf:
 D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\features\toolchain.prf:
@@ -450,6 +453,7 @@ D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\mkspecs\features\lex.prf:
 ..\MadScientist\MadScientist.pro:
 D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\lib\Qt5Widgets.prl:
 D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\lib\Qt5Gui.prl:
+D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\lib\Qt5Sql.prl:
 D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\lib\Qt5Core.prl:
 D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\lib\qtmain.prl:
 qmake: FORCE

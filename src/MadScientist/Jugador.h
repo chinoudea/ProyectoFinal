@@ -8,13 +8,12 @@
 #include <QString>
 
 class Jugador {
-public: 
-    int id;
-    QString usuario;
-    QString clave;
-    double puntaje;
-    double distancia;
-    int numNivel;
+public:     
+    QString nombre;
+    unsigned int puntaje;
+    unsigned int distanciaRecorrida;
+    unsigned char numNivel;
+    unsigned char numCheckPoint;
     
 void guardar();
 };
