@@ -225,7 +225,27 @@ debug\qrc_images.cpp: ..\MadScientist\images.qrc \
 		..\MadScientist\resources\images\UserInterface\Btn2.png \
 		..\MadScientist\resources\images\UserInterface\BG_Login.png \
 		..\MadScientist\resources\images\UserInterface\game_logo.png \
-		..\MadScientist\resources\images\UserInterface\transparent.png
+		..\MadScientist\resources\images\UserInterface\transparent.png \
+		..\MadScientist\resources\images\Backgrounds\1.png \
+		..\MadScientist\resources\images\Backgrounds\2.png \
+		..\MadScientist\resources\images\Backgrounds\3.png \
+		..\MadScientist\resources\images\Backgrounds\4.png \
+		..\MadScientist\resources\images\Backgrounds\5.png \
+		..\MadScientist\resources\images\Backgrounds\6.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_03.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_04.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_05.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_06.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_10.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_07.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_11.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_08.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_12.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_09.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_13.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_00.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_01.png \
+		..\MadScientist\resources\images\scientist\Gun0\Walk\Walk_02.png
 	D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\bin\rcc.exe -name images ..\MadScientist\images.qrc -o debug\qrc_images.cpp
 
 compiler_moc_predefs_make_all: debug\moc_predefs.h
@@ -238,8 +258,8 @@ compiler_moc_header_make_all: debug\moc_Juego.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) debug\moc_Juego.cpp
 debug\moc_Juego.cpp: ..\MadScientist\Juego.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QMainWindow \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qmainwindow.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QGraphicsScene \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtguiglobal.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qglobal.h \
@@ -265,13 +285,10 @@ debug\moc_Juego.cpp: ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qversiontagging.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtgui-config.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qwidget.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobjectdefs.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qnamespace.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs_win.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qstring.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qchar.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qbytearray.h \
@@ -296,26 +313,27 @@ debug\moc_Juego.cpp: ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvarlengtharray.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qcontainerfwd.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject_impl.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qmargins.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpaintdevice.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qrect.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsize.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qpoint.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpalette.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qrect.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qmargins.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsize.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qbrush.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvector.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qcolor.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qrgb.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qrgba64.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qbrush.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvector.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qmatrix.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpolygon.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qregion.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs_win.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qdatastream.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qiodevice.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qline.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtransform.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpainterpath.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qimage.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpaintdevice.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpixelformat.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpixmap.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsharedpointer.h \
@@ -323,6 +341,11 @@ debug\moc_Juego.cpp: ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qhash.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qfont.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpen.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QMainWindow \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qmainwindow.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qwidget.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpalette.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qfontmetrics.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qfontinfo.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qsizepolicy.h \
@@ -344,6 +367,11 @@ debug\moc_Juego.cpp: ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtouchdevice.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qicon.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QDebug \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\QKeyEvent \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QTimer \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qtimer.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qbasictimer.h \
 		..\MadScientist\Partida.h \
 		..\MadScientist\Usuario.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QString \
@@ -356,6 +384,13 @@ debug\moc_Juego.cpp: ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtSql\qtsql-config.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtSql\QSqlQuery \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtSql\qsqlquery.h \
+		..\MadScientist\Cientifico.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\QList \
+		..\MadScientist\Personaje.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QGraphicsPixmapItem \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
+		..\MadScientist\Arma.h \
+		..\MadScientist\Proyectil.h \
 		debug\moc_predefs.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\bin\moc.exe
 	D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Me/PERSONAL/UdeA/INFO2/ProyectoFinal/src/build-MadScientist-Desktop_Qt_5_12_9_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/Qt5.12.9/5.12.9/msvc2015_64/mkspecs/win32-msvc -ID:/Me/PERSONAL/UdeA/INFO2/ProyectoFinal/src/MadScientist -ID:/Qt/Qt5.12.9/5.12.9/msvc2015_64/include -ID:/Qt/Qt5.12.9/5.12.9/msvc2015_64/include/QtWidgets -ID:/Qt/Qt5.12.9/5.12.9/msvc2015_64/include/QtGui -ID:/Qt/Qt5.12.9/5.12.9/msvc2015_64/include/QtANGLE -ID:/Qt/Qt5.12.9/5.12.9/msvc2015_64/include/QtSql -ID:/Qt/Qt5.12.9/5.12.9/msvc2015_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.27.29110\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.27.29110\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt" ..\MadScientist\Juego.h -o debug\moc_Juego.cpp
@@ -421,10 +456,8 @@ debug\Arma.obj: ..\MadScientist\Arma.cpp ..\MadScientist\Arma.h \
 debug\Ayuda.obj: ..\MadScientist\Ayuda.cpp ..\MadScientist\Ayuda.h
 
 debug\Cientifico.obj: ..\MadScientist\Cientifico.cpp ..\MadScientist\Cientifico.h \
-		..\MadScientist\Personaje.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QGraphicsPixmapItem \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\QList \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qevent.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtguiglobal.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qglobal.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qconfig-bootstrapped.h \
@@ -448,11 +481,20 @@ debug\Cientifico.obj: ..\MadScientist\Cientifico.cpp ..\MadScientist\Cientifico.
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qnumeric.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qversiontagging.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtgui-config.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobjectdefs.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qnamespace.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs_win.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qregion.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qrect.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qmargins.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsize.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qpoint.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qdatastream.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qscopedpointer.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qiodevice.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qstring.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qchar.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qbytearray.h \
@@ -472,35 +514,37 @@ debug\Cientifico.obj: ..\MadScientist\Cientifico.cpp ..\MadScientist\Cientifico.
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qregexp.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qstringmatcher.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qcoreevent.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qscopedpointer.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qmetatype.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvarlengtharray.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qcontainerfwd.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject_impl.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qkeysequence.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvariant.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qmap.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qdebug.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qhash.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qtextstream.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qiodevice.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qlocale.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qshareddata.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvector.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qpoint.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qset.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qcontiguouscache.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsharedpointer.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qrect.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qmargins.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsize.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qurl.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qurlquery.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qfile.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qfiledevice.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qvector2d.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtouchdevice.h \
+		..\MadScientist\Personaje.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QGraphicsPixmapItem \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpainterpath.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qmatrix.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpolygon.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qregion.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs_win.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qdatastream.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qline.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpixmap.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpaintdevice.h \
@@ -510,6 +554,7 @@ debug\Cientifico.obj: ..\MadScientist\Cientifico.cpp ..\MadScientist\Cientifico.
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qimage.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpixelformat.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtransform.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QDebug \
 		..\MadScientist\Arma.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QString \
 		..\MadScientist\Proyectil.h
@@ -676,6 +721,7 @@ debug\Enemigo.obj: ..\MadScientist\Enemigo.cpp ..\MadScientist\Enemigo.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qimage.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpixelformat.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtransform.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QDebug \
 		..\MadScientist\Arma.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QString \
 		..\MadScientist\Proyectil.h
@@ -683,8 +729,8 @@ debug\Enemigo.obj: ..\MadScientist\Enemigo.cpp ..\MadScientist\Enemigo.h \
 debug\Explosivo.obj: ..\MadScientist\Explosivo.cpp ..\MadScientist\Explosivo.h
 
 debug\Juego.obj: ..\MadScientist\Juego.cpp ..\MadScientist\Juego.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QMainWindow \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qmainwindow.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QGraphicsScene \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtguiglobal.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qglobal.h \
@@ -710,13 +756,10 @@ debug\Juego.obj: ..\MadScientist\Juego.cpp ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qversiontagging.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtgui-config.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qwidget.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobjectdefs.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qnamespace.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs_win.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qstring.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qchar.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qbytearray.h \
@@ -741,26 +784,27 @@ debug\Juego.obj: ..\MadScientist\Juego.cpp ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvarlengtharray.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qcontainerfwd.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject_impl.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qmargins.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpaintdevice.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qrect.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsize.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qpoint.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpalette.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qrect.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qmargins.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsize.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qbrush.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvector.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qcolor.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qrgb.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qrgba64.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qbrush.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvector.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qmatrix.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpolygon.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qregion.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs_win.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qdatastream.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qiodevice.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qline.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtransform.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpainterpath.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qimage.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpaintdevice.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpixelformat.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpixmap.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsharedpointer.h \
@@ -768,6 +812,11 @@ debug\Juego.obj: ..\MadScientist\Juego.cpp ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qhash.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qfont.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpen.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QMainWindow \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qmainwindow.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qwidget.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpalette.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qfontmetrics.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qfontinfo.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qsizepolicy.h \
@@ -789,6 +838,11 @@ debug\Juego.obj: ..\MadScientist\Juego.cpp ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtouchdevice.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qicon.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QDebug \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\QKeyEvent \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QTimer \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qtimer.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qbasictimer.h \
 		..\MadScientist\Partida.h \
 		..\MadScientist\Usuario.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QString \
@@ -801,36 +855,14 @@ debug\Juego.obj: ..\MadScientist\Juego.cpp ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtSql\qtsql-config.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtSql\QSqlQuery \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtSql\qsqlquery.h \
-		ui_Juego.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QVariant \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QApplication \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qapplication.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qcoreapplication.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qeventloop.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qguiapplication.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qinputmethod.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QLabel \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qlabel.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qframe.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QLineEdit \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qlineedit.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtextcursor.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtextformat.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpen.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtextoption.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QPushButton \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qpushbutton.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qabstractbutton.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QSpinBox \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qspinbox.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qvalidator.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qregularexpression.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QStackedWidget \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qstackedwidget.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QWidget \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QDebug
+		..\MadScientist\Cientifico.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\QList \
+		..\MadScientist\Personaje.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QGraphicsPixmapItem \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
+		..\MadScientist\Arma.h \
+		..\MadScientist\Proyectil.h \
+		ui_Juego.h
 
 debug\Jugador.obj: ..\MadScientist\Jugador.cpp ..\MadScientist\Jugador.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QString \
@@ -1007,9 +1039,11 @@ debug\Personaje.obj: ..\MadScientist\Personaje.cpp ..\MadScientist\Personaje.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qimage.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpixelformat.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtransform.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QDebug \
 		..\MadScientist\Arma.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QString \
-		..\MadScientist\Proyectil.h
+		..\MadScientist\Proyectil.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\QPixmap
 
 debug\Proyectil.obj: ..\MadScientist\Proyectil.cpp ..\MadScientist\Proyectil.h
 
@@ -1048,8 +1082,8 @@ debug\Usuario.obj: ..\MadScientist\Usuario.cpp ..\MadScientist\Usuario.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qstringbuilder.h
 
 debug\main.obj: ..\MadScientist\main.cpp ..\MadScientist\Juego.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QMainWindow \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qmainwindow.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QGraphicsScene \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qgraphicsscene.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtwidgetsglobal.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtguiglobal.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qglobal.h \
@@ -1075,13 +1109,10 @@ debug\main.obj: ..\MadScientist\main.cpp ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qversiontagging.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtgui-config.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtwidgets-config.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qwidget.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobjectdefs.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qnamespace.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs_win.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qstring.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qchar.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qbytearray.h \
@@ -1106,26 +1137,27 @@ debug\main.obj: ..\MadScientist\main.cpp ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvarlengtharray.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qcontainerfwd.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qobject_impl.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qmargins.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpaintdevice.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qrect.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsize.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qpoint.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpalette.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qrect.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qmargins.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsize.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qbrush.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvector.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qcolor.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qrgb.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qrgba64.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qbrush.h \
-		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qvector.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qmatrix.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpolygon.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qregion.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qwindowdefs_win.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qdatastream.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qiodevice.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qline.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtransform.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpainterpath.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qimage.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpaintdevice.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpixelformat.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpixmap.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsharedpointer.h \
@@ -1133,6 +1165,11 @@ debug\main.obj: ..\MadScientist\main.cpp ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qhash.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qfont.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpen.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QMainWindow \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qmainwindow.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qwidget.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qpalette.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qfontmetrics.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qfontinfo.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qsizepolicy.h \
@@ -1154,6 +1191,11 @@ debug\main.obj: ..\MadScientist\main.cpp ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qtouchdevice.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qtabwidget.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\qicon.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QDebug \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\QKeyEvent \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QTimer \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qtimer.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qbasictimer.h \
 		..\MadScientist\Partida.h \
 		..\MadScientist\Usuario.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\QString \
@@ -1166,6 +1208,13 @@ debug\main.obj: ..\MadScientist\main.cpp ..\MadScientist\Juego.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtSql\qtsql-config.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtSql\QSqlQuery \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtSql\qsqlquery.h \
+		..\MadScientist\Cientifico.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtGui\QList \
+		..\MadScientist\Personaje.h \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QGraphicsPixmapItem \
+		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qgraphicsitem.h \
+		..\MadScientist\Arma.h \
+		..\MadScientist\Proyectil.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\QApplication \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtWidgets\qapplication.h \
 		D:\Qt\Qt5.12.9\5.12.9\msvc2015_64\include\QtCore\qcoreapplication.h \

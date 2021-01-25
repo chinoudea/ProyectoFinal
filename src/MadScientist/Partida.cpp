@@ -14,7 +14,3 @@ Partida::Partida()
 
 }
 
-QString Partida::guestGenerator()
-{
-    return "";
-}

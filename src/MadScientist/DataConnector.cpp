@@ -32,7 +32,7 @@ DataConnector::~DataConnector()
     db.close();
 }
 
-bool DataConnector::authUser(QString username, QString password)
+int DataConnector::authUser(QString username, QString password)
 {
     query.prepare("SELECT id FROM Usuarios WHERE username = ? AND password = ?");
     query.addBindValue(username);
@@ -43,10 +43,8 @@ bool DataConnector::authUser(QString username, QString password)
         return false;
     }
     if(query.next()) {
-        qDebug() << query.value("id");
-
-        return true;
+        return query.value("id").toInt();
     }
 
-    return false;
+    return 0;
 }

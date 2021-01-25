@@ -15,7 +15,7 @@ class DataConnector {
 public:
     DataConnector(QString typeDB = DRIVER, QString pathDB = PATH_DB);
     ~DataConnector();
-    bool authUser(QString username, QString password);
+    int authUser(QString username, QString password);
 private:
     QSqlDatabase db;
     QSqlQuery query;

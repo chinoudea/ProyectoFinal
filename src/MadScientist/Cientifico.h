@@ -6,6 +6,7 @@
 #ifndef _CIENTIFICO_H
 #define _CIENTIFICO_H
 
+#include <QList>
 #include "Personaje.h"
 
 
@@ -29,6 +30,9 @@ public:
     void saltar();
 
     void cambiarArma();
+
+    void configPics(unsigned char numPics);
+
 };
 
 #endif //_CIENTIFICO_H

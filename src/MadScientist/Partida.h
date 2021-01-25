@@ -14,8 +14,7 @@ public:
     const int NUM_MAX_PLAYERS = 4;
     Usuario user;
     QVector<Jugador> players;
-private:
-    QString guestGenerator();
+    unsigned char numPlayers;
 };
 
 #endif //_PARTIDA_H

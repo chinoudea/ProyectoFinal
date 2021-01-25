@@ -8,7 +8,9 @@
 #include <QString>
 
 class Jugador {
-public:     
+public:
+    Jugador();
+    Jugador(QString name);
     QString nombre;
     unsigned int puntaje;
     unsigned int distanciaRecorrida;

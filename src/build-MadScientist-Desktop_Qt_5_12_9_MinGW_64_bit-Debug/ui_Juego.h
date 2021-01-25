@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -42,16 +43,19 @@ public:
     QLabel *label_5;
     QSpinBox *txtNumPlayers;
     QLabel *label_6;
-    QPushButton *btnNextPlayers;
+    QPushButton *btnToNamePlayers;
     QWidget *namePlayersPage;
     QLabel *label_7;
-    QLabel *label_8;
-    QLineEdit *lineEdit;
-    QPushButton *btnNextPlayers_2;
+    QLabel *lblNumNamePlayer;
+    QLineEdit *txtNamePlayer;
+    QPushButton *btnNextPlayer;
+    QLabel *lblNameMsg;
     QWidget *authUserPage;
     QPushButton *btnLoadSession;
     QPushButton *btnNewGame_2;
     QLabel *label_9;
+    QWidget *scenePage;
+    QGraphicsView *gvScene;
 
     void setupUi(QMainWindow *Juego)
     {
@@ -230,9 +234,9 @@ public:
         label_6->setPalette(palette6);
         label_6->setFont(font);
         label_6->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/bkg_login);"));
-        btnNextPlayers = new QPushButton(numPlayersPage);
-        btnNextPlayers->setObjectName(QString::fromUtf8("btnNextPlayers"));
-        btnNextPlayers->setGeometry(QRect(350, 400, 118, 42));
+        btnToNamePlayers = new QPushButton(numPlayersPage);
+        btnToNamePlayers->setObjectName(QString::fromUtf8("btnToNamePlayers"));
+        btnToNamePlayers->setGeometry(QRect(350, 400, 118, 42));
         QPalette palette7;
         palette7.setBrush(QPalette::Active, QPalette::Button, brush);
         palette7.setBrush(QPalette::Active, QPalette::ButtonText, brush1);
@@ -246,9 +250,9 @@ public:
         palette7.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
         palette7.setBrush(QPalette::Disabled, QPalette::Base, brush);
         palette7.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        btnNextPlayers->setPalette(palette7);
-        btnNextPlayers->setFont(font);
-        btnNextPlayers->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/boton1);\n"
+        btnToNamePlayers->setPalette(palette7);
+        btnToNamePlayers->setFont(font);
+        btnToNamePlayers->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/boton1);\n"
 "background-color: transparent;"));
         navConsole->addWidget(numPlayersPage);
         namePlayersPage = new QWidget();
@@ -257,24 +261,26 @@ public:
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(210, 120, 377, 160));
         label_7->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/logo);"));
-        label_8 = new QLabel(namePlayersPage);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(340, 290, 141, 20));
+        lblNumNamePlayer = new QLabel(namePlayersPage);
+        lblNumNamePlayer->setObjectName(QString::fromUtf8("lblNumNamePlayer"));
+        lblNumNamePlayer->setGeometry(QRect(340, 300, 141, 20));
         QPalette palette8;
         palette8.setBrush(QPalette::Active, QPalette::WindowText, brush1);
         palette8.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
         palette8.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        label_8->setPalette(palette8);
-        label_8->setFont(font);
-        label_8->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/bkg_login);"));
-        lineEdit = new QLineEdit(namePlayersPage);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(300, 340, 221, 31));
-        lineEdit->setFont(font1);
-        lineEdit->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/transparent);"));
-        btnNextPlayers_2 = new QPushButton(namePlayersPage);
-        btnNextPlayers_2->setObjectName(QString::fromUtf8("btnNextPlayers_2"));
-        btnNextPlayers_2->setGeometry(QRect(350, 400, 118, 42));
+        lblNumNamePlayer->setPalette(palette8);
+        lblNumNamePlayer->setFont(font);
+        lblNumNamePlayer->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/bkg_login);"));
+        txtNamePlayer = new QLineEdit(namePlayersPage);
+        txtNamePlayer->setObjectName(QString::fromUtf8("txtNamePlayer"));
+        txtNamePlayer->setGeometry(QRect(300, 340, 221, 31));
+        txtNamePlayer->setFont(font1);
+        txtNamePlayer->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/transparent);"));
+        txtNamePlayer->setInputMethodHints(Qt::ImhNone);
+        txtNamePlayer->setMaxLength(10);
+        btnNextPlayer = new QPushButton(namePlayersPage);
+        btnNextPlayer->setObjectName(QString::fromUtf8("btnNextPlayer"));
+        btnNextPlayer->setGeometry(QRect(350, 400, 118, 42));
         QPalette palette9;
         palette9.setBrush(QPalette::Active, QPalette::Button, brush);
         palette9.setBrush(QPalette::Active, QPalette::ButtonText, brush1);
@@ -288,36 +294,29 @@ public:
         palette9.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
         palette9.setBrush(QPalette::Disabled, QPalette::Base, brush);
         palette9.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        btnNextPlayers_2->setPalette(palette9);
-        btnNextPlayers_2->setFont(font);
-        btnNextPlayers_2->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/boton1);\n"
+        btnNextPlayer->setPalette(palette9);
+        btnNextPlayer->setFont(font);
+        btnNextPlayer->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/boton1);\n"
 "background-color: transparent;"));
+        lblNameMsg = new QLabel(namePlayersPage);
+        lblNameMsg->setObjectName(QString::fromUtf8("lblNameMsg"));
+        lblNameMsg->setGeometry(QRect(530, 345, 251, 21));
+        QPalette palette10;
+        palette10.setBrush(QPalette::Active, QPalette::WindowText, brush3);
+        palette10.setBrush(QPalette::Inactive, QPalette::WindowText, brush3);
+        palette10.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
+        lblNameMsg->setPalette(palette10);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Roboto"));
+        font3.setPointSize(12);
+        lblNameMsg->setFont(font3);
+        lblNameMsg->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/bkg_login);"));
         navConsole->addWidget(namePlayersPage);
         authUserPage = new QWidget();
         authUserPage->setObjectName(QString::fromUtf8("authUserPage"));
         btnLoadSession = new QPushButton(authUserPage);
         btnLoadSession->setObjectName(QString::fromUtf8("btnLoadSession"));
         btnLoadSession->setGeometry(QRect(250, 371, 118, 42));
-        QPalette palette10;
-        palette10.setBrush(QPalette::Active, QPalette::Button, brush);
-        palette10.setBrush(QPalette::Active, QPalette::ButtonText, brush1);
-        palette10.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette10.setBrush(QPalette::Active, QPalette::Window, brush);
-        palette10.setBrush(QPalette::Inactive, QPalette::Button, brush);
-        palette10.setBrush(QPalette::Inactive, QPalette::ButtonText, brush1);
-        palette10.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette10.setBrush(QPalette::Inactive, QPalette::Window, brush);
-        palette10.setBrush(QPalette::Disabled, QPalette::Button, brush);
-        palette10.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
-        palette10.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette10.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        btnLoadSession->setPalette(palette10);
-        btnLoadSession->setFont(font);
-        btnLoadSession->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/boton1);\n"
-"background-color: transparent;"));
-        btnNewGame_2 = new QPushButton(authUserPage);
-        btnNewGame_2->setObjectName(QString::fromUtf8("btnNewGame_2"));
-        btnNewGame_2->setGeometry(QRect(490, 370, 118, 42));
         QPalette palette11;
         palette11.setBrush(QPalette::Active, QPalette::Button, brush);
         palette11.setBrush(QPalette::Active, QPalette::ButtonText, brush1);
@@ -331,7 +330,27 @@ public:
         palette11.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
         palette11.setBrush(QPalette::Disabled, QPalette::Base, brush);
         palette11.setBrush(QPalette::Disabled, QPalette::Window, brush);
-        btnNewGame_2->setPalette(palette11);
+        btnLoadSession->setPalette(palette11);
+        btnLoadSession->setFont(font);
+        btnLoadSession->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/boton1);\n"
+"background-color: transparent;"));
+        btnNewGame_2 = new QPushButton(authUserPage);
+        btnNewGame_2->setObjectName(QString::fromUtf8("btnNewGame_2"));
+        btnNewGame_2->setGeometry(QRect(490, 370, 118, 42));
+        QPalette palette12;
+        palette12.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette12.setBrush(QPalette::Active, QPalette::ButtonText, brush1);
+        palette12.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette12.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::ButtonText, brush1);
+        palette12.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
+        palette12.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette12.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        btnNewGame_2->setPalette(palette12);
         btnNewGame_2->setFont(font);
         btnNewGame_2->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/boton1);\n"
 "background-color: transparent;"));
@@ -340,10 +359,17 @@ public:
         label_9->setGeometry(QRect(210, 120, 377, 160));
         label_9->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/logo);"));
         navConsole->addWidget(authUserPage);
+        scenePage = new QWidget();
+        scenePage->setObjectName(QString::fromUtf8("scenePage"));
+        gvScene = new QGraphicsView(scenePage);
+        gvScene->setObjectName(QString::fromUtf8("gvScene"));
+        gvScene->setGeometry(QRect(0, 0, 800, 600));
+        gvScene->setStyleSheet(QString::fromUtf8("background-image: url(:/levels/bg_1);"));
+        gvScene->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        navConsole->addWidget(scenePage);
         Juego->setCentralWidget(centralwidget);
 
         retranslateUi(Juego);
-        QObject::connect(btnLogin, SIGNAL(pressed()), navConsole, SLOT(update()));
 
         navConsole->setCurrentIndex(4);
 
@@ -364,10 +390,11 @@ public:
         lblMensaje->setText(QApplication::translate("Juego", "Login error, try again.", nullptr));
         label_5->setText(QString());
         label_6->setText(QApplication::translate("Juego", "How many players?", nullptr));
-        btnNextPlayers->setText(QApplication::translate("Juego", "Continue", nullptr));
+        btnToNamePlayers->setText(QApplication::translate("Juego", "Continue", nullptr));
         label_7->setText(QString());
-        label_8->setText(QApplication::translate("Juego", "Player 1  Name", nullptr));
-        btnNextPlayers_2->setText(QApplication::translate("Juego", "Continue", nullptr));
+        lblNumNamePlayer->setText(QApplication::translate("Juego", "Player 1 Name", nullptr));
+        btnNextPlayer->setText(QApplication::translate("Juego", "Continue", nullptr));
+        lblNameMsg->setText(QString());
         btnLoadSession->setText(QApplication::translate("Juego", "Load Game", nullptr));
         btnNewGame_2->setText(QApplication::translate("Juego", "New Game", nullptr));
         label_9->setText(QString());

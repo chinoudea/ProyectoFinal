@@ -5,6 +5,8 @@
 
 #include "Personaje.h"
 
+#include <QPixmap>
+
 /**
  * Personaje implementation
  */
@@ -15,7 +17,8 @@
  */
 Personaje::Personaje(QGraphicsItem *parent)
 {
-
+    direccion = 2;
+    indexPic = 0;
 }
 
 void Personaje::mover() {
@@ -26,7 +29,11 @@ void Personaje::mover() {
         setX(pos().x() - deltaMove);
         break;
     case 2: //Movimiento a la derecha
-        setX(pos().x() + deltaMove);
+        setX(pos().x() + deltaMove);        
+        if (indexPic>=setPics.size()) indexPic = 0;
+        qDebug() << setPics.value(indexPic);
+        setPixmap(QPixmap(setPics.value(indexPic)));
+        indexPic++;
         break;
     case 3: //Movimiento de salto
         break;

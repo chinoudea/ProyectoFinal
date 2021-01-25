@@ -6,4 +6,28 @@
         <file alias="landing">resources/images/UserInterface/Landing.png</file>
         <file alias="transparent">resources/images/UserInterface/transparent.png</file>
     </qresource>
+    <qresource prefix="/levels">
+        <file alias="bg_1">resources/images/Backgrounds/1.png</file>
+        <file alias="bg_2">resources/images/Backgrounds/2.png</file>
+        <file alias="bg_3">resources/images/Backgrounds/3.png</file>
+        <file alias="bg_4">resources/images/Backgrounds/4.png</file>
+        <file alias="bg_5">resources/images/Backgrounds/5.png</file>
+        <file alias="bg_6">resources/images/Backgrounds/6.png</file>
+    </qresource>
+    <qresource prefix="/scientist/gun0/walk">
+        <file alias="0">resources/images/scientist/Gun0/Walk/Walk_00.png</file>
+        <file alias="1">resources/images/scientist/Gun0/Walk/Walk_01.png</file>
+        <file alias="2">resources/images/scientist/Gun0/Walk/Walk_02.png</file>
+        <file alias="3">resources/images/scientist/Gun0/Walk/Walk_03.png</file>
+        <file alias="4">resources/images/scientist/Gun0/Walk/Walk_04.png</file>
+        <file alias="5">resources/images/scientist/Gun0/Walk/Walk_05.png</file>
+        <file alias="6">resources/images/scientist/Gun0/Walk/Walk_06.png</file>
+        <file alias="7">resources/images/scientist/Gun0/Walk/Walk_07.png</file>
+        <file alias="8">resources/images/scientist/Gun0/Walk/Walk_08.png</file>
+        <file alias="9">resources/images/scientist/Gun0/Walk/Walk_09.png</file>
+        <file alias="10">resources/images/scientist/Gun0/Walk/Walk_10.png</file>
+        <file alias="11">resources/images/scientist/Gun0/Walk/Walk_11.png</file>
+        <file alias="12">resources/images/scientist/Gun0/Walk/Walk_12.png</file>
+        <file alias="13">resources/images/scientist/Gun0/Walk/Walk_13.png</file>
+    </qresource>
 </RCC>

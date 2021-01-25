@@ -839,7 +839,7 @@ background-color: transparent;</string>
        <string>How many players?</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnNextPlayers">
+     <widget class="QPushButton" name="btnToNamePlayers">
       <property name="geometry">
        <rect>
         <x>350</x>
@@ -998,11 +998,11 @@ background-color: transparent;</string>
        <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="label_8">
+     <widget class="QLabel" name="lblNumNamePlayer">
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>290</y>
+        <y>300</y>
         <width>141</width>
         <height>20</height>
        </rect>
@@ -1054,10 +1054,10 @@ background-color: transparent;</string>
        <string notr="true">background-image: url(:/userInterface/bkg_login);</string>
       </property>
       <property name="text">
-       <string>Player 1  Name</string>
+       <string>Player 1 Name</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="txtNamePlayer">
       <property name="geometry">
        <rect>
         <x>300</x>
@@ -1075,8 +1075,14 @@ background-color: transparent;</string>
       <property name="styleSheet">
        <string notr="true">background-image: url(:/userInterface/transparent);</string>
       </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
      </widget>
-     <widget class="QPushButton" name="btnNextPlayers_2">
+     <widget class="QPushButton" name="btnNextPlayer">
       <property name="geometry">
        <rect>
         <x>350</x>
@@ -1215,6 +1221,65 @@ background-color: transparent;</string>
       </property>
       <property name="text">
        <string>Continue</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblNameMsg">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>345</y>
+        <width>251</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>0</green>
+            <blue>0</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>120</red>
+            <green>120</green>
+            <blue>120</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/userInterface/bkg_login);</string>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>
@@ -1518,26 +1583,27 @@ background-color: transparent;</string>
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="scenePage">
+     <widget class="QGraphicsView" name="gvScene">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/levels/bg_1);</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>btnLogin</sender>
-   <signal>pressed()</signal>
-   <receiver>navConsole</receiver>
-   <slot>update()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>278</x>
-     <y>401</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

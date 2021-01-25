@@ -10,6 +10,16 @@
  */
 
 
+Jugador::Jugador()
+{
+
+}
+
+Jugador::Jugador(QString name)
+{
+    nombre = name;
+}
+
 void Jugador::guardar() {
 
 }
