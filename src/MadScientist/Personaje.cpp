@@ -19,26 +19,64 @@ Personaje::Personaje(QGraphicsItem *parent)
 {
     direccion = 2;
     indexPic = 0;
+    unidadTiempo = 0.02;// 20 milisegundos
+    velocidadX=0;
+    accionUsuario=0;
 }
 
 void Personaje::mover() {
-    switch (direccion) {
-    case 0: //Sin movimiento
-        break;
-    case 1: //Movimiento a la izquierda
-        setX(pos().x() - deltaMove);
-        break;
-    case 2: //Movimiento a la derecha
-        setX(pos().x() + deltaMove);        
+    //Se valida si hay accion de usuario sobre el personaje.
+    switch (accionUsuario) {
+        case 0: //Inercia del movimiento
+            if (velocidadX>0) {
+                velocidadX-=50;
+                velocidadX = velocidadX < 0 ? 0 : velocidadX;
+            } else if (velocidadX<0) {
+                velocidadX+=50;
+                velocidadX = velocidadX > 0 ? 0 : velocidadX;
+            }
+            break;
+        case 1: //Movimiento a la izquierda
+            velocidadX-=5;
+            velocidadX = velocidadX < -500 ? -500 : velocidadX;
+            break;
+        case 2: //Movimiento a la derecha
+            velocidadX+=5;
+            velocidadX = velocidadX > 500 ? 500 : velocidadX;
+            break;
+        case 3: //Movimiento de salto
+            break;
+    }
+    if (velocidadX != 0) {
+        deltaMove = velocidadX * unidadTiempo;
+        setX(pos().x() + ceil(deltaMove));
         if (indexPic>=setPics.size()) indexPic = 0;
-        qDebug() << setPics.value(indexPic);
+        //qDebug() << setPics.value(indexPic);
         setPixmap(QPixmap(setPics.value(indexPic)));
         indexPic++;
-        break;
-    case 3: //Movimiento de salto
-        break;
     }
+    /*
+        switch (direccion) {
+            case 0: //Sin movimiento
+                break;
+            case 1: //Movimiento a la izquierda
+                deltaMove = velocidadX * unidadTiempo;
+                setX(pos().x() + ceil(deltaMove));
+                break;
+            case 2: //Movimiento a la derecha
+                deltaMove = velocidadX * unidadTiempo;
+                setX(pos().x() + ceil(deltaMove));
+                if (indexPic>=setPics.size()) indexPic = 0;
+                //qDebug() << setPics.value(indexPic);
+                setPixmap(QPixmap(setPics.value(indexPic)));
+                indexPic++;
+                break;
+            case 3: //Movimiento de salto
+                break;
+        }*/
 }
+
+
 /**
  * @brief Personaje::setDireccion
  * @param value

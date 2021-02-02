@@ -10,7 +10,7 @@ Juego::Juego(QWidget *parent)
     // Hide de error message in login page
     ui->lblMensaje->hide();
     // Set the initial page
-    ui->navConsole->setCurrentIndex(0);
+    ui->navConsole->setCurrentIndex(5);
     // Set Regular Expression for names
     QRegularExpression rx("([a-zA-Z0-9\\_]\\w+)");
     QValidator *validator = new QRegularExpressionValidator(rx, this);
@@ -19,17 +19,26 @@ Juego::Juego(QWidget *parent)
     dc = new DataConnector();
     // Set the scene
     scene = new QGraphicsScene();
-    scene->setSceneRect(0,0,2445,600);
+    scene->setSceneRect(0,0,2445,600);    
+    //ui->gvScene->setFixedSize(800,600);
     ui->gvScene->setScene(scene);
+
     // Set Guest User
     user = new Usuario();
     // Cientifico
     scientist = new Cientifico();
+    scientist->setFlag(QGraphicsItem::ItemIsFocusable);
+    scientist->setFocus();
     scene->addItem(scientist);
+    scene->setFocusItem(scientist);
+    ui->gvScene->centerOn(scientist);
+
+
+
     //Se configuran Timers
     timerGame = new QTimer;
-    connect(timerGame,SIGNAL(timeout()),this,SLOT(mover()));
-    //timerGame->start(20);
+    connect(timerGame,SIGNAL(timeout()),this,SLOT(play()));
+    timerGame->start(20);
 }
 
 Juego::~Juego()
@@ -78,7 +87,7 @@ void Juego::on_btnNextPlayer_pressed()
         if (sesion->players.size() == sesion->numPlayers) {
             ui->lblNumNamePlayer->setText("Player 1 Name");
             // Move to players scene screen
-            ui->navConsole->setCurrentIndex(3);
+            ui->navConsole->setCurrentIndex(5);
         } else {
             ui->lblNumNamePlayer->setText("Player "+QString::number(sesion->players.size()+1)+" Name");
         }
@@ -108,51 +117,11 @@ void Juego::on_btnLoginAuth_pressed()
     }
 }
 
-void Juego::keyPressEvent(QKeyEvent *event)
-{
-    // The keyboard events are tracked only in the scene page
-    if (ui->navConsole->currentIndex() == 5) {
 
-    }
-    if (event->key() == Qt::Key_Right) {
-
-    }
-    // Validate if game is active
-//    if(playing && !lost) {
-//        playing = true;
-//        player->setPlaylist(playlist);
-//        player->play();
-//        timerGame->start(25);
-//        ghost1->moving = true;
-//        ghost2->moving = true;
-//        ghost3->moving = true;
-//        ghost4->moving = true;
-//        pacman->t->start(8);
-//    }
-//    if (event->key() == Qt::Key_A) {
-//        pacman->direction = 0;
-//    } else if (event->key() == Qt::Key_D) {
-//        pacman->direction = 1;
-//    } else if (event->key() == Qt::Key_W) {
-//        pacman->direction = 2;
-//    } else if (event->key() == Qt::Key_S) {
-//        pacman->direction = 3;
-//    } else if (event->key() == Qt::Key_Space) {
-//        if (!lost) {
-//            pacman->t->stop();
-//            player->stop();
-//            timerGame->stop();
-//            playing=false;
-//        } else {
-//            restart();
-//        }
-//    }
-
-}
-
-void Juego::mover() {
-    qDebug() << "Entre a mover " << QString::number(scientist->indexPic);
-    scientist->mover();
+void Juego::play() {
+    //qDebug() << "Entre a mover " << QString::number(scientist->indexPic);
+    scientist->mover();    
+    ui->gvScene->centerOn(scientist);
 }
 
 void Juego::on_btnNewGame_2_pressed()

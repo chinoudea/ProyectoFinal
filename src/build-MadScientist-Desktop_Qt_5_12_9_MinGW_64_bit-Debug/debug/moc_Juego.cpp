@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Juego_t {
     QByteArrayData data[9];
-    char stringdata0[156];
+    char stringdata0[155];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,14 +37,14 @@ QT_MOC_LITERAL(2, 28, 0), // ""
 QT_MOC_LITERAL(3, 29, 19), // "on_btnLogin_pressed"
 QT_MOC_LITERAL(4, 49, 27), // "on_btnToNamePlayers_pressed"
 QT_MOC_LITERAL(5, 77, 23), // "on_btnLoginAuth_pressed"
-QT_MOC_LITERAL(6, 101, 5), // "mover"
-QT_MOC_LITERAL(7, 107, 23), // "on_btnNewGame_2_pressed"
-QT_MOC_LITERAL(8, 131, 24) // "on_btnNextPlayer_pressed"
+QT_MOC_LITERAL(6, 101, 4), // "play"
+QT_MOC_LITERAL(7, 106, 23), // "on_btnNewGame_2_pressed"
+QT_MOC_LITERAL(8, 130, 24) // "on_btnNextPlayer_pressed"
 
     },
     "Juego\0on_btnNewGame_pressed\0\0"
     "on_btnLogin_pressed\0on_btnToNamePlayers_pressed\0"
-    "on_btnLoginAuth_pressed\0mover\0"
+    "on_btnLoginAuth_pressed\0play\0"
     "on_btnNewGame_2_pressed\0"
     "on_btnNextPlayer_pressed"
 };
@@ -94,7 +94,7 @@ void Juego::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 1: _t->on_btnLogin_pressed(); break;
         case 2: _t->on_btnToNamePlayers_pressed(); break;
         case 3: _t->on_btnLoginAuth_pressed(); break;
-        case 4: _t->mover(); break;
+        case 4: _t->play(); break;
         case 5: _t->on_btnNewGame_2_pressed(); break;
         case 6: _t->on_btnNextPlayer_pressed(); break;
         default: ;

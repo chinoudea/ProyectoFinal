@@ -22,7 +22,6 @@ public:
 
     Juego(QWidget *parent = nullptr);
     ~Juego();
-    void keyPressEvent(QKeyEvent *event);
     void testFunc();    
 
 private slots:
@@ -31,7 +30,7 @@ private slots:
     void on_btnLogin_pressed();   
     void on_btnToNamePlayers_pressed();
     void on_btnLoginAuth_pressed();
-    void mover();
+    void play();
 
     void on_btnNewGame_2_pressed();
 

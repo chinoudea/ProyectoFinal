@@ -21,7 +21,7 @@ Cientifico::Cientifico(QGraphicsItem *parent)
     //setPixmap(QPixmap(":/scientist/Gun0_Walk0").copy(160,225,360,275).scaledToHeight(250));
     setPos(0,0);    
     configPics(14);
-    deltaMove = 5;
+    deltaMove = 0;
     //configImagenes(0);
 }
 
@@ -47,6 +47,42 @@ void Cientifico::saltar() {
 
 void Cientifico::cambiarArma() {
 
+}
+void Cientifico::keyPressEvent(QKeyEvent *event)
+{
+
+    switch (event->key()) {
+        case 0: //Sin movimiento
+            break;
+        case Qt::Key_Left: //Movimiento a la izquierda
+            accionUsuario = 1;
+            /*
+            setX(pos().x() - deltaMove);
+            if (indexPic<=0) indexPic = (setPics.size()-1);
+            //qDebug() << setPics.value(indexPic);
+            setPixmap(QPixmap(setPics.value(indexPic)));
+            indexPic--;
+            */
+            break;
+        case Qt::Key_Right: //Movimiento a la derecha
+            accionUsuario = 2;
+            /*
+            setX(pos().x() + deltaMove);
+            if (indexPic>=setPics.size()) indexPic = 0;
+            //qDebug() << setPics.value(indexPic);
+            setPixmap(QPixmap(setPics.value(indexPic)));
+            indexPic++;
+            */
+            break;
+        case Qt::Key_Up: //Movimiento de salto
+            accionUsuario = 3;
+            break;
+    }
+}
+
+void Cientifico::keyReleaseEvent(QKeyEvent *event)
+{
+    accionUsuario = 0;
 }
 
 void Cientifico::configPics(unsigned char numPics) {

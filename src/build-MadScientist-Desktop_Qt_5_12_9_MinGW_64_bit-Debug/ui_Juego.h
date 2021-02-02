@@ -363,15 +363,17 @@ public:
         scenePage->setObjectName(QString::fromUtf8("scenePage"));
         gvScene = new QGraphicsView(scenePage);
         gvScene->setObjectName(QString::fromUtf8("gvScene"));
-        gvScene->setGeometry(QRect(0, 0, 800, 600));
+        gvScene->setGeometry(QRect(0, 0, 801, 601));
         gvScene->setStyleSheet(QString::fromUtf8("background-image: url(:/levels/bg_1);"));
         gvScene->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        gvScene->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        gvScene->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         navConsole->addWidget(scenePage);
         Juego->setCentralWidget(centralwidget);
 
         retranslateUi(Juego);
 
-        navConsole->setCurrentIndex(4);
+        navConsole->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(Juego);

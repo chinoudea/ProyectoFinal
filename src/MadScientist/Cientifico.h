@@ -33,6 +33,10 @@ public:
 
     void configPics(unsigned char numPics);
 
+    // QGraphicsItem interface
+protected:
+    void keyPressEvent(QKeyEvent *event);
+    void keyReleaseEvent(QKeyEvent *event);
 };
 
 #endif //_CIENTIFICO_H
