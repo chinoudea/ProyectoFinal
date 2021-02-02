@@ -21,7 +21,8 @@ Cientifico::Cientifico(QGraphicsItem *parent)
     //setPixmap(QPixmap(":/scientist/Gun0_Walk0").copy(160,225,360,275).scaledToHeight(250));
     setPos(0,0);    
     configPics(14);
-    deltaMove = 0;
+    deltaMoveX = 0;
+    deltaMoveY = 0;
     //configImagenes(0);
 }
 
@@ -76,13 +77,16 @@ void Cientifico::keyPressEvent(QKeyEvent *event)
             break;
         case Qt::Key_Up: //Movimiento de salto
             accionUsuario = 3;
+            qDebug() << "Posicion en Y = " << pos().y();
             break;
     }
 }
 
 void Cientifico::keyReleaseEvent(QKeyEvent *event)
 {
-    accionUsuario = 0;
+    if (accionUsuario!=3) {
+        accionUsuario = 0;
+    }
 }
 
 void Cientifico::configPics(unsigned char numPics) {

@@ -24,13 +24,15 @@ public:
     unsigned char direccion;  //Direccion en la que se esta moviendo
     unsigned char accionUsuario;  //Direccion en la que se esta moviendo
     double velocidadX; //Velocidad horizontal del personaje
+    double velocidad0; //Vo movimiento parabolico
     double aceleracionX; //Aceleración horizontal del personaje
     double velocidadY; //Velocidad veritical del personaje
     double aceleracionY; //Aceleración vertical del personaje
-    double unidadTiempo;
+    double anguloSalto; //Aceleración vertical del personaje
+    double unidadTiempo, tiempoVuelo;
     QVector <QString> setPics; //Arreglo de imagenes para movimiento
     unsigned int ubicacion; //Ubicacion en el nivel segun desplazamiento.
-    double deltaMove; //Delta de movimiento
+    double deltaMoveX, deltaMoveY; //Delta de movimiento
     unsigned char indexPic;
     Arma arma;
 
@@ -49,7 +51,9 @@ public:
      */
     void mover();
 
-
+private:
+    double g = 1000.81;
+    double pi = 2*acos(0.0);
 };
 
 #endif //_PERSONAJE_H
