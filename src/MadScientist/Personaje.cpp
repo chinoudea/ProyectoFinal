@@ -40,12 +40,14 @@ void Personaje::mover() {
             velocidad0 = velocidadX;
             break;
         case 1: //Movimiento a la izquierda
-            velocidadX-=5;
+            velocidadX-=10;
+            if (velocidadX<100 && velocidadX>-100) velocidadX=-100;
             velocidadX = velocidadX < -500 ? -500 : velocidadX;
             velocidad0 = velocidadX;
             break;
         case 2: //Movimiento a la derecha
-            velocidadX+=5;
+            velocidadX+=10;
+            if (velocidadX<100 && velocidadX>-100) velocidadX=100;
             velocidadX = velocidadX > 500 ? 500 : velocidadX;
             velocidad0 = velocidadX;
             break;
@@ -56,7 +58,7 @@ void Personaje::mover() {
                 velocidadX = (velocidad0 * cos(anguloSalto*pi/180));
                 deltaMoveY = - ceil(abs(velocidad0)*sin(anguloSalto*pi/180)*tiempoVuelo) + ceil(g*pow(tiempoVuelo,2)/2) ;
                 setY(deltaMoveY);
-                qDebug() << "Posicion en Y= " << pos().y();
+                //qDebug() << "Posicion en Y= " << pos().y();
                 if (pos().y()>0) {
                     setY(0);
                     accionUsuario=0;
@@ -64,9 +66,9 @@ void Personaje::mover() {
                 }
             } else {
                 anguloSalto = 90;
-                deltaMoveY = - ceil(abs(700)*sin(anguloSalto*pi/180)*tiempoVuelo) + ceil(g*pow(tiempoVuelo,2)/2) ;
+                deltaMoveY = - ceil(abs(600)*sin(anguloSalto*pi/180)*tiempoVuelo) + ceil(g*pow(tiempoVuelo,2)/2) ;
                 setY(deltaMoveY);
-                qDebug() << "Posicion en Y= " << pos().y();
+                //qDebug() << "Posicion en Y= " << pos().y();
                 if (pos().y()>0) {
                     setY(0);
                     accionUsuario=0;
@@ -77,6 +79,7 @@ void Personaje::mover() {
     }
     if (velocidadX != 0) {
         deltaMoveX = velocidadX * unidadTiempo;
+        //qDebug() << "Movera en X " << deltaMoveX << " pixeles";
         setX(pos().x() + ceil(deltaMoveX));
         if (accionUsuario!=3) {
             if (indexPic>=setPics.size()) indexPic = 0;

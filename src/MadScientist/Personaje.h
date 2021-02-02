@@ -7,10 +7,11 @@
 #include <QGraphicsPixmapItem>
 #include <QDebug>
 #include <QKeyEvent>
-#include "Arma.h"
+
 
 class Personaje:public QObject,  public QGraphicsPixmapItem {
 
+    Q_OBJECT
 public: 
     /*
      * Constructor
@@ -34,7 +35,7 @@ public:
     unsigned int ubicacion; //Ubicacion en el nivel segun desplazamiento.
     double deltaMoveX, deltaMoveY; //Delta de movimiento
     unsigned char indexPic;
-    Arma arma;
+    //Arma arma;
 
     /**
      * @param nombre
@@ -52,8 +53,11 @@ public:
     void mover();
 
 private:
-    double g = 1000.81;
+    double g = 1000;
     double pi = 2*acos(0.0);
+
+
+
 };
 
 #endif //_PERSONAJE_H

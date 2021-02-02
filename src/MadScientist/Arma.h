@@ -8,10 +8,9 @@
 #include <Proyectil.h>
 
 class Arma {
-public: 
+public:     
     QString tipo;
-    //QPixmap[] setPics;
-    Proyectil *proyectil;
+    //QPixmap[] setPics;    
     
 void actuarArma();
 };

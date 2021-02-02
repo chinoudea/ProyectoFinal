@@ -6,14 +6,25 @@
 #ifndef _PROYECTIL_H
 #define _PROYECTIL_H
 
-class Proyectil {
-public: 
+#include <QObject>
+#include <QGraphicsPixmapItem>
+#include <QTimer>
+#include <QDebug>
+#include <QGraphicsScene>
+#include "Enemy.h"
+
+class Proyectil: public QObject, public QGraphicsPixmapItem
+{
+    Q_OBJECT
+public:     
+    Proyectil(QString tipo, unsigned char direction);
     int tipo;
-    //QPixmap[] setPics;
+    unsigned char direccion;
+
+public slots:
+    void mover();
     
-void mover();
-    
-void colisionar();
+
 };
 
 #endif //_PROYECTIL_H

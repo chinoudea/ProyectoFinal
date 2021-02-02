@@ -30,4 +30,68 @@
         <file alias="12">resources/images/scientist/Gun0/Walk/Walk_12.png</file>
         <file alias="13">resources/images/scientist/Gun0/Walk/Walk_13.png</file>
     </qresource>
+    <qresource prefix="/scientist/gun1/walk">
+        <file alias="0">resources/images/scientist/Gun1/Walk/Walk_00.png</file>
+        <file alias="1">resources/images/scientist/Gun1/Walk/Walk_01.png</file>
+        <file alias="2">resources/images/scientist/Gun1/Walk/Walk_02.png</file>
+        <file alias="3">resources/images/scientist/Gun1/Walk/Walk_03.png</file>
+        <file alias="4">resources/images/scientist/Gun1/Walk/Walk_04.png</file>
+        <file alias="5">resources/images/scientist/Gun1/Walk/Walk_05.png</file>
+        <file alias="6">resources/images/scientist/Gun1/Walk/Walk_06.png</file>
+        <file alias="7">resources/images/scientist/Gun1/Walk/Walk_07.png</file>
+        <file alias="8">resources/images/scientist/Gun1/Walk/Walk_08.png</file>
+        <file alias="9">resources/images/scientist/Gun1/Walk/Walk_09.png</file>
+        <file alias="10">resources/images/scientist/Gun1/Walk/Walk_10.png</file>
+        <file alias="11">resources/images/scientist/Gun1/Walk/Walk_11.png</file>
+        <file alias="12">resources/images/scientist/Gun1/Walk/Walk_12.png</file>
+        <file alias="13">resources/images/scientist/Gun1/Walk/Walk_13.png</file>
+    </qresource>
+    <qresource prefix="/scientist/gun2/walk">
+        <file alias="0">resources/images/scientist/Gun2/Walk/Walk_00.png</file>
+        <file alias="1">resources/images/scientist/Gun2/Walk/Walk_01.png</file>
+        <file alias="2">resources/images/scientist/Gun2/Walk/Walk_02.png</file>
+        <file alias="3">resources/images/scientist/Gun2/Walk/Walk_03.png</file>
+        <file alias="4">resources/images/scientist/Gun2/Walk/Walk_04.png</file>
+        <file alias="5">resources/images/scientist/Gun2/Walk/Walk_05.png</file>
+        <file alias="6">resources/images/scientist/Gun2/Walk/Walk_06.png</file>
+        <file alias="7">resources/images/scientist/Gun2/Walk/Walk_07.png</file>
+        <file alias="8">resources/images/scientist/Gun2/Walk/Walk_08.png</file>
+        <file alias="9">resources/images/scientist/Gun2/Walk/Walk_09.png</file>
+        <file alias="10">resources/images/scientist/Gun2/Walk/Walk_10.png</file>
+        <file alias="11">resources/images/scientist/Gun2/Walk/Walk_11.png</file>
+        <file alias="12">resources/images/scientist/Gun2/Walk/Walk_12.png</file>
+        <file alias="13">resources/images/scientist/Gun2/Walk/Walk_13.png</file>
+    </qresource>
+    <qresource prefix="/projectile">
+        <file>resources/images/Projectile/Other/1.png</file>
+        <file>resources/images/Projectile/Other/2.png</file>
+        <file>resources/images/Projectile/Other/3.png</file>
+        <file>resources/images/Projectile/Other/4.png</file>
+        <file>resources/images/Projectile/Other/5.png</file>
+        <file>resources/images/Projectile/Other/6.png</file>
+        <file>resources/images/Projectile/Other/7.png</file>
+        <file>resources/images/Projectile/Other/08.png</file>
+        <file alias="gun1">resources/images/Projectile/Other/8.png</file>
+        <file>resources/images/Projectile/Other/09.png</file>
+        <file>resources/images/Projectile/Other/10.png</file>
+        <file>resources/images/Projectile/Other/11.png</file>
+        <file>resources/images/Projectile/Other/12.png</file>
+        <file>resources/images/Projectile/Other/13.png</file>
+    </qresource>
+    <qresource prefix="/enemies/enemy0/walk">
+        <file alias="0">resources/images/Enemies/Enemy Character01/Walk/Walk_00.png</file>
+        <file alias="1">resources/images/Enemies/Enemy Character01/Walk/Walk_01.png</file>
+        <file alias="2">resources/images/Enemies/Enemy Character01/Walk/Walk_02.png</file>
+        <file alias="3">resources/images/Enemies/Enemy Character01/Walk/Walk_03.png</file>
+        <file alias="4">resources/images/Enemies/Enemy Character01/Walk/Walk_04.png</file>
+        <file alias="5">resources/images/Enemies/Enemy Character01/Walk/Walk_05.png</file>
+        <file alias="6">resources/images/Enemies/Enemy Character01/Walk/Walk_06.png</file>
+        <file alias="7">resources/images/Enemies/Enemy Character01/Walk/Walk_07.png</file>
+        <file alias="8">resources/images/Enemies/Enemy Character01/Walk/Walk_08.png</file>
+        <file alias="9">resources/images/Enemies/Enemy Character01/Walk/Walk_09.png</file>
+        <file alias="10">resources/images/Enemies/Enemy Character01/Walk/Walk_10.png</file>
+        <file alias="11">resources/images/Enemies/Enemy Character01/Walk/Walk_11.png</file>
+        <file alias="12">resources/images/Enemies/Enemy Character01/Walk/Walk_12.png</file>
+        <file alias="13">resources/images/Enemies/Enemy Character01/Walk/Walk_13.png</file>
+    </qresource>
 </RCC>

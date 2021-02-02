@@ -7,7 +7,9 @@
 #define _CIENTIFICO_H
 
 #include <QList>
+#include <QGraphicsScene>
 #include "Personaje.h"
+#include "Proyectil.h"
 
 
 class Cientifico: public Personaje {
@@ -16,6 +18,7 @@ public:
      * Constructor
      */
     Cientifico(QGraphicsItem *parent = 0);
+    QMap<QString,unsigned char> armasPics;
     /**
      * @param tipo
      */
@@ -29,14 +32,15 @@ public:
 
     void saltar();
 
-    void cambiarArma();
+    void cambiarArma();        
 
-    void configPics(unsigned char numPics);
+    void configPics(QString tipoArma);
 
     // QGraphicsItem interface
 protected:
     void keyPressEvent(QKeyEvent *event);
     void keyReleaseEvent(QKeyEvent *event);
+
 };
 
 #endif //_CIENTIFICO_H

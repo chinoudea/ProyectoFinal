@@ -10,35 +10,49 @@ Juego::Juego(QWidget *parent)
     // Hide de error message in login page
     ui->lblMensaje->hide();
     // Set the initial page
-    ui->navConsole->setCurrentIndex(5);
+    ui->navConsole->setCurrentIndex(0);
     // Set Regular Expression for names
     QRegularExpression rx("([a-zA-Z0-9\\_]\\w+)");
     QValidator *validator = new QRegularExpressionValidator(rx, this);
     ui->txtNamePlayer->setValidator(validator);
     // Initialize data connector
     dc = new DataConnector();
+    //Configuracion de vista
+    //ui->gvScene->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    ui->gvScene->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    ui->gvScene->setFixedSize(800,600);
     // Set the scene
     scene = new QGraphicsScene();
-    scene->setSceneRect(0,0,2445,600);    
-    //ui->gvScene->setFixedSize(800,600);
+    ui->gvScene->setSceneRect(0,0,2445,600);
     ui->gvScene->setScene(scene);
-
+    ui->gvScene->centerOn(-150,300);
+}
+void Juego::iniciarJuego() {
     // Set Guest User
     user = new Usuario();
+    ui->gvScene->setBackgroundBrush(QBrush(QImage(":/levels/bg_1")));
     // Cientifico
     scientist = new Cientifico();
+    scientist->setPos(-150,0);
     scientist->setFlag(QGraphicsItem::ItemIsFocusable);
     scientist->setFocus();
     scene->addItem(scientist);
-    scene->setFocusItem(scientist);
-    ui->gvScene->centerOn(scientist);
-
-
+    scene->setFocusItem(scientist);    
+    // Se configura nivel
+    setNivel.insert(1,"enemy0");
+    setNivel.insert(4,"enemy0");
+    setNivel.insert(7,"enemy0");
+    setNivel.insert(10,"enemy0");
+    setNivel.insert(13,"enemy0");
+    setNivel.insert(16,"enemy0");
 
     //Se configuran Timers
     timerGame = new QTimer;
     connect(timerGame,SIGNAL(timeout()),this,SLOT(play()));
     timerGame->start(20);
+    timerEnemies = new QTimer;
+    connect(timerEnemies,SIGNAL(timeout()),this,SLOT(spawn()));
+    timerEnemies->start(5000);
 }
 
 Juego::~Juego()
@@ -88,6 +102,7 @@ void Juego::on_btnNextPlayer_pressed()
             ui->lblNumNamePlayer->setText("Player 1 Name");
             // Move to players scene screen
             ui->navConsole->setCurrentIndex(5);
+            iniciarJuego();
         } else {
             ui->lblNumNamePlayer->setText("Player "+QString::number(sesion->players.size()+1)+" Name");
         }
@@ -121,7 +136,29 @@ void Juego::on_btnLoginAuth_pressed()
 void Juego::play() {
     //qDebug() << "Entre a mover " << QString::number(scientist->indexPic);
     scientist->mover();    
-    ui->gvScene->centerOn(scientist);
+    ui->gvScene->centerOn(scientist->x()+550,scientist->y());
+    //Posicion en X del nivel.
+    navegado = ui->gvScene->mapToScene(ui->gvScene->rect()).boundingRect().x();
+    //Test
+    for (int i = 0; i<enemigos.size();i++ ) {
+        enemigos[i]->mover();
+    }
+
+}
+
+void Juego::spawn()
+{
+    tiempoEnemigo++;
+    qDebug() << "Validando si debe crear enemigo";
+    if (setNivel.contains(tiempoEnemigo)) {
+        Enemy * enemigo = new Enemy();
+        enemigo->setTipoEnemigo(setNivel.value(tiempoEnemigo));
+        enemigo->setPos(navegado+820,0);
+        enemigo->configPics();
+        scene->addItem(enemigo);
+        enemigos.append(enemigo);
+    }
+
 }
 
 void Juego::on_btnNewGame_2_pressed()
