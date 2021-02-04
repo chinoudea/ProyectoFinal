@@ -24,6 +24,12 @@ Jugador::Jugador(QString name)
     numCheckPoint=0;
 }
 
-void Jugador::guardar() {
-
+void Jugador::read(const QJsonObject &json)
+{
+    nombre = json["name"].toString();
+    puntaje = json["score"].toInt();
+    distanciaRecorrida = json["distance"].toInt();
+    numNivel = json["level"].toInt();
+    numCheckPoint = json["checkpoint"].toInt();
 }
+

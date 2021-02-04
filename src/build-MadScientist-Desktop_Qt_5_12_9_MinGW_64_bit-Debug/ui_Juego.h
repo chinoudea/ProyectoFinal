@@ -374,7 +374,7 @@ public:
 
         retranslateUi(Juego);
 
-        navConsole->setCurrentIndex(4);
+        navConsole->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(Juego);

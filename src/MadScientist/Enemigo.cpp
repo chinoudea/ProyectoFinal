@@ -1,18 +1,8 @@
 #include "Enemigo.h"
 
-Enemigo::Enemigo()
+Enemigo::Enemigo(QString name)
 {
-    setNombre("enemy0");
-    configPics("walk");
-    accionUsuario = 1;
-}
-
-
-void Enemigo::usarArma() {
-
-}
-
-
-void Enemigo::medirDistancia() {
-
+//    setNombre(name);
+//    configPics("walk");
+//    accionUsuario = 1;
 }

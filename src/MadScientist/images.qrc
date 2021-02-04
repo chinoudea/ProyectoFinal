@@ -14,7 +14,7 @@
         <file alias="bg_5">resources/images/Backgrounds/5.png</file>
         <file alias="bg_6">resources/images/Backgrounds/6.png</file>
     </qresource>
-    <qresource prefix="/scientist/gun0/walk">
+    <qresource prefix="/personaje0gun0/walk">
         <file alias="0">resources/images/scientist/Gun0/Walk/Walk_00.png</file>
         <file alias="1">resources/images/scientist/Gun0/Walk/Walk_01.png</file>
         <file alias="2">resources/images/scientist/Gun0/Walk/Walk_02.png</file>
@@ -30,7 +30,7 @@
         <file alias="12">resources/images/scientist/Gun0/Walk/Walk_12.png</file>
         <file alias="13">resources/images/scientist/Gun0/Walk/Walk_13.png</file>
     </qresource>
-    <qresource prefix="/scientist/gun1/walk">
+    <qresource prefix="/personaje0gun1/walk">
         <file alias="0">resources/images/scientist/Gun1/Walk/Walk_00.png</file>
         <file alias="1">resources/images/scientist/Gun1/Walk/Walk_01.png</file>
         <file alias="2">resources/images/scientist/Gun1/Walk/Walk_02.png</file>
@@ -46,7 +46,7 @@
         <file alias="12">resources/images/scientist/Gun1/Walk/Walk_12.png</file>
         <file alias="13">resources/images/scientist/Gun1/Walk/Walk_13.png</file>
     </qresource>
-    <qresource prefix="/scientist/gun2/walk">
+    <qresource prefix="/personaje0gun2/walk">
         <file alias="0">resources/images/scientist/Gun2/Walk/Walk_00.png</file>
         <file alias="1">resources/images/scientist/Gun2/Walk/Walk_01.png</file>
         <file alias="2">resources/images/scientist/Gun2/Walk/Walk_02.png</file>

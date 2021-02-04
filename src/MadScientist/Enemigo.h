@@ -1,25 +1,17 @@
-#ifndef ENEMY_H
-#define ENEMY_H
+#ifndef ENEMIGO_H
+#define ENEMIGO_H
 
 #include <QList>
-#include <QTimer>
-#include <QGraphicsScene>
-#include "Personaje.h"
+//#include "Personaje.h"
 
 
 
-class Enemigo : public Personaje {
+class Enemigo{// : public Personaje {
 
 public:
     //Constructor
-    Enemigo();
-
-private:
-
-    QMap<QString,unsigned char> enemyPics;
-    void usarArma();
-    void medirDistancia();
+    Enemigo(QString name="");
 
 };
 
-#endif // ENEMY_H
+#endif // ENEMIGO_H

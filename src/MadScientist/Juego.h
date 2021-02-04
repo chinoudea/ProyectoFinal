@@ -28,6 +28,7 @@ public:
     void iniciarJuego();
     void ejecutarPartida();
     void cargarNivel(int nivel);
+
 private slots:
 
     void on_btnNewGame_pressed();
@@ -52,7 +53,7 @@ private slots:
     bool continuar=true;
     // Objetos a mover
     Cientifico * scientist;
-    QList<Enemigo *> enemigos;
+    //QList<Enemigo *> enemigos;
     QMap<int,QString> setNivel;
     int tiempoEnemigo=0;
 };

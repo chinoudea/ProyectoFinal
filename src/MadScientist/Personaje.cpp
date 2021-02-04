@@ -26,7 +26,7 @@ Personaje::Personaje()
     tiempoVuelo=0;
 }
 
-void Personaje::configPics(QString movimiento, QString tipoArma="")
+void Personaje::configPics(QString movimiento, QString tipoArma)
 {
     setPics.clear();
     indexPic = 0;
@@ -50,8 +50,8 @@ void Personaje::setTipoPersonaje(const TipoPersonaje &value)
 void Personaje::mover() {
     //Se valida si hay accion de usuario sobre el personaje.
     switch (accionUsuario) {
-    case 0: //Inercia del movimiento
-        if (velocidadX>0) {
+        case 0: //Inercia del movimiento
+            if (velocidadX>0) {
                 velocidadX-=50;
                 velocidadX = velocidadX < 0 ? 0 : velocidadX;
             } else if (velocidadX<0) {

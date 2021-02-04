@@ -17,8 +17,8 @@ public:
     /*
      * Constructor
      */
-    Cientifico(QGraphicsItem *parent = 0);
-    QMap<QString,unsigned char> armasPics;
+    Cientifico();
+
     /**
      * @param tipo
      */
@@ -32,9 +32,7 @@ public:
 
     void saltar();
 
-    void cambiarArma();        
-
-    void configPics(QString tipoArma);
+    void cambiarArma();            
 
     // QGraphicsItem interface
 protected:

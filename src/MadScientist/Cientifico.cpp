@@ -13,24 +13,14 @@
 /**
  * @param tipo
  */
-Cientifico::Cientifico(QGraphicsItem *parent)
+Cientifico::Cientifico()
 {
+    setTipoPersonaje(TipoPersonaje::Cientifico);
     setNombre("name"); //Se configura el nombre del cientifico
-    armasPics.insert("gun0",14);
-    armasPics.insert("gun1",14);
-    armasPics.insert("gun2",14);
-    armasPics.insert("gun3",14);
-    armasPics.insert("gun4",14);
-    armasPics.insert("gun5",14);
-    armasPics.insert("gun6",14);
-    //setPixmap(QPixmap(":/scientist/gun0/walk/0"));
-    //setPixmap(QPixmap(":/scientist/Gun0_Walk0"));
-    //setPixmap(QPixmap(":/scientist/Gun0_Walk0").copy(160,225,360,275).scaledToHeight(250));    
-    //setScale(0.7);
-    configPics("gun1");
+    configPics("walk","gun0");
     deltaMoveX = 0;
     deltaMoveY = 0;
-    //configImagenes(0);
+    //accionUsuario=2;
 }
 
 void Cientifico::lanzarExplosivo(QString tipo) {
@@ -56,6 +46,7 @@ void Cientifico::saltar() {
 void Cientifico::cambiarArma() {
 
 }
+
 void Cientifico::keyPressEvent(QKeyEvent *event)
 {
 
@@ -102,11 +93,3 @@ void Cientifico::keyReleaseEvent(QKeyEvent *event)
     }
 }
 
-void Cientifico::configPics(QString tipoArma) {
-    setPics.clear();
-    indexPic = 0;    
-    for (unsigned char i=0; i<armasPics[tipoArma]; i++) {
-        setPics.append(":/scientist/"+tipoArma+"/walk/" + QString::number(i));
-    }
-    setPixmap(QPixmap(":/scientist/"+tipoArma+"/walk/0"));
-}

@@ -24,7 +24,6 @@ public:
 public slots:
     void mover();
     
-
 };
 
 #endif //_PROYECTIL_H

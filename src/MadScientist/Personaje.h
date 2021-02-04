@@ -34,7 +34,7 @@ public:
     double aceleracionY; //Aceleración vertical del personaje
     double anguloSalto; //Aceleración vertical del personaje
     double unidadTiempo, tiempoVuelo;
-    QVector <QString> setPics; //Arreglo de imagenes para movimiento
+    QVector<QString> setPics; //Arreglo de imagenes para movimiento
     unsigned int ubicacion; //Ubicacion en el nivel segun desplazamiento.
     double deltaMoveX, deltaMoveY; //Delta de movimiento
     unsigned char indexPic;    
@@ -65,8 +65,6 @@ private:
     double g = 1000;
     double pi = 2*acos(0.0);
     TipoPersonaje tipoPersonaje;
-
-
 
 };
 

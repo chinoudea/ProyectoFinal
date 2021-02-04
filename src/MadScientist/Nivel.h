@@ -9,7 +9,7 @@
 #include <QJsonObject>
 #include <QList>
 #include <QString>
-#include "Enemigo.h"
+//#include "Enemigo.h"
 
 class Nivel {
 public: 
@@ -20,8 +20,8 @@ public:
     // Getter Alto
     int getAltoNivel() const;
     // Getter and Setter Lista Enemigos
-    QList<Enemigo> getListaEnemigos() const;
-    void setListaEnemigos(const QList<Enemigo> &value);
+    //QList<Enemigo> getListaEnemigos() const;
+    //void setListaEnemigos(const QList<Enemigo> &value);
     // Read level configuration from JSON
     void leer(const QJsonObject &json);
     // Write level configuration to JSON
@@ -30,7 +30,7 @@ private:
     QString fondo; //Path de la imagen de fondo
     int anchoNivel; //Dimension de ancho de la escena
     const int altoNivel = 600; //Dimension de alto de la escena
-    QList<Enemigo> listaEnemigos;
+    //QList<Enemigo> *listaEnemigos;
 
 };
 
