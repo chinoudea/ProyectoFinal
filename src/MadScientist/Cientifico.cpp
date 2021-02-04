@@ -17,7 +17,7 @@ Cientifico::Cientifico()
 {
     setTipoPersonaje(TipoPersonaje::Cientifico);
     setNombre("name"); //Se configura el nombre del cientifico
-    configPics("walk","gun0");
+    configPics("walk","gun1");
     deltaMoveX = 0;
     deltaMoveY = 0;
     //accionUsuario=2;

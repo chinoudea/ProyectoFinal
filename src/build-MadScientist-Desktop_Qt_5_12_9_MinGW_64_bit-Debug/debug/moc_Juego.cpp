@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Juego_t {
-    QByteArrayData data[10];
-    char stringdata0[161];
+    QByteArrayData data[16];
+    char stringdata0[261];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,22 +32,31 @@ struct qt_meta_stringdata_Juego_t {
 static const qt_meta_stringdata_Juego_t qt_meta_stringdata_Juego = {
     {
 QT_MOC_LITERAL(0, 0, 5), // "Juego"
-QT_MOC_LITERAL(1, 6, 21), // "on_btnNewGame_pressed"
-QT_MOC_LITERAL(2, 28, 0), // ""
-QT_MOC_LITERAL(3, 29, 19), // "on_btnLogin_pressed"
-QT_MOC_LITERAL(4, 49, 27), // "on_btnToNamePlayers_pressed"
-QT_MOC_LITERAL(5, 77, 23), // "on_btnLoginAuth_pressed"
-QT_MOC_LITERAL(6, 101, 4), // "play"
-QT_MOC_LITERAL(7, 106, 5), // "spawn"
-QT_MOC_LITERAL(8, 112, 23), // "on_btnNewGame_2_pressed"
-QT_MOC_LITERAL(9, 136, 24) // "on_btnNextPlayer_pressed"
+QT_MOC_LITERAL(1, 6, 16), // "updatePlayerName"
+QT_MOC_LITERAL(2, 23, 0), // ""
+QT_MOC_LITERAL(3, 24, 6), // "nombre"
+QT_MOC_LITERAL(4, 31, 16), // "centerCientifico"
+QT_MOC_LITERAL(5, 48, 11), // "Cientifico*"
+QT_MOC_LITERAL(6, 60, 3), // "ply"
+QT_MOC_LITERAL(7, 64, 15), // "changeSceneRect"
+QT_MOC_LITERAL(8, 80, 11), // "dimensiones"
+QT_MOC_LITERAL(9, 92, 21), // "on_btnNewGame_pressed"
+QT_MOC_LITERAL(10, 114, 19), // "on_btnLogin_pressed"
+QT_MOC_LITERAL(11, 134, 27), // "on_btnToNamePlayers_pressed"
+QT_MOC_LITERAL(12, 162, 23), // "on_btnLoginAuth_pressed"
+QT_MOC_LITERAL(13, 186, 23), // "on_btnNewGame_2_pressed"
+QT_MOC_LITERAL(14, 210, 24), // "on_btnNextPlayer_pressed"
+QT_MOC_LITERAL(15, 235, 25) // "on_btnLoadSession_pressed"
 
     },
-    "Juego\0on_btnNewGame_pressed\0\0"
-    "on_btnLogin_pressed\0on_btnToNamePlayers_pressed\0"
-    "on_btnLoginAuth_pressed\0play\0spawn\0"
-    "on_btnNewGame_2_pressed\0"
-    "on_btnNextPlayer_pressed"
+    "Juego\0updatePlayerName\0\0nombre\0"
+    "centerCientifico\0Cientifico*\0ply\0"
+    "changeSceneRect\0dimensiones\0"
+    "on_btnNewGame_pressed\0on_btnLogin_pressed\0"
+    "on_btnToNamePlayers_pressed\0"
+    "on_btnLoginAuth_pressed\0on_btnNewGame_2_pressed\0"
+    "on_btnNextPlayer_pressed\0"
+    "on_btnLoadSession_pressed"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,7 +66,7 @@ static const uint qt_meta_data_Juego[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -65,17 +74,21 @@ static const uint qt_meta_data_Juego[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   54,    2, 0x08 /* Private */,
-       3,    0,   55,    2, 0x08 /* Private */,
-       4,    0,   56,    2, 0x08 /* Private */,
-       5,    0,   57,    2, 0x08 /* Private */,
-       6,    0,   58,    2, 0x08 /* Private */,
-       7,    0,   59,    2, 0x08 /* Private */,
-       8,    0,   60,    2, 0x08 /* Private */,
-       9,    0,   61,    2, 0x08 /* Private */,
+       1,    1,   64,    2, 0x0a /* Public */,
+       4,    1,   67,    2, 0x0a /* Public */,
+       7,    1,   70,    2, 0x0a /* Public */,
+       9,    0,   73,    2, 0x08 /* Private */,
+      10,    0,   74,    2, 0x08 /* Private */,
+      11,    0,   75,    2, 0x08 /* Private */,
+      12,    0,   76,    2, 0x08 /* Private */,
+      13,    0,   77,    2, 0x08 /* Private */,
+      14,    0,   78,    2, 0x08 /* Private */,
+      15,    0,   79,    2, 0x08 /* Private */,
 
  // slots: parameters
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, 0x80000000 | 5,    6,
+    QMetaType::Void, QMetaType::QRect,    8,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -93,18 +106,19 @@ void Juego::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         auto *_t = static_cast<Juego *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_btnNewGame_pressed(); break;
-        case 1: _t->on_btnLogin_pressed(); break;
-        case 2: _t->on_btnToNamePlayers_pressed(); break;
-        case 3: _t->on_btnLoginAuth_pressed(); break;
-        case 4: _t->play(); break;
-        case 5: _t->spawn(); break;
-        case 6: _t->on_btnNewGame_2_pressed(); break;
-        case 7: _t->on_btnNextPlayer_pressed(); break;
+        case 0: _t->updatePlayerName((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 1: _t->centerCientifico((*reinterpret_cast< Cientifico*(*)>(_a[1]))); break;
+        case 2: _t->changeSceneRect((*reinterpret_cast< QRect(*)>(_a[1]))); break;
+        case 3: _t->on_btnNewGame_pressed(); break;
+        case 4: _t->on_btnLogin_pressed(); break;
+        case 5: _t->on_btnToNamePlayers_pressed(); break;
+        case 6: _t->on_btnLoginAuth_pressed(); break;
+        case 7: _t->on_btnNewGame_2_pressed(); break;
+        case 8: _t->on_btnNextPlayer_pressed(); break;
+        case 9: _t->on_btnLoadSession_pressed(); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject Juego::staticMetaObject = { {
@@ -136,13 +150,13 @@ int Juego::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 10)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 8;
+        _id -= 10;
     }
     return _id;
 }

@@ -7,6 +7,7 @@
 #include <QGraphicsPixmapItem>
 #include <QDebug>
 #include <QKeyEvent>
+#include <QJsonObject>
 
 
 class Personaje:public QObject,  public QGraphicsPixmapItem {
@@ -24,6 +25,7 @@ public:
      * Atributos del objeto
      */
     QString nombre; //Nombre del personaje
+    QString tipoArma = "";
     unsigned int nivelVida;  //Nivel de vida del personaje
     unsigned char direccion;  //Direccion en la que se esta moviendo
     unsigned char accionUsuario;  //Direccion en la que se esta moviendo
@@ -60,7 +62,8 @@ public:
 
     TipoPersonaje getTipoPersonaje() const;
     void setTipoPersonaje(const TipoPersonaje &value);
-
+    void leer(const QJsonObject &json);
+    void escribir(QJsonObject &json) const;
 private:
     double g = 1000;
     double pi = 2*acos(0.0);

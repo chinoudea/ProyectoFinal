@@ -5,6 +5,7 @@
 
 #include "Personaje.h"
 
+
 #include <QPixmap>
 
 /**
@@ -44,6 +45,21 @@ Personaje::TipoPersonaje Personaje::getTipoPersonaje() const
 void Personaje::setTipoPersonaje(const TipoPersonaje &value)
 {
     tipoPersonaje = value;
+}
+
+void Personaje::leer(const QJsonObject &json)
+{
+    tipoPersonaje = TipoPersonaje(json["tipoPersonaje"].toInt());
+    tipoArma = json["tipoArma"].toString();
+    direccion = json["direccion"].toInt();
+    configPics("walk",tipoArma);
+}
+
+void Personaje::escribir(QJsonObject &json) const
+{
+    json["tipoPersonaje"] =tipoPersonaje;
+    json["tipoArma"] =tipoArma;
+    json["direccion"] =direccion;
 }
 
 

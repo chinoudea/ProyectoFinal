@@ -13,6 +13,7 @@ public:
     Jugador();
     Jugador(QString name);
     QString nombre;
+    QString arma;
     unsigned int puntaje;
     unsigned int distanciaRecorrida;
     unsigned char numNivel;

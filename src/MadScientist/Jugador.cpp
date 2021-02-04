@@ -31,6 +31,7 @@ void Jugador::leer(const QJsonObject &json)
     distanciaRecorrida = json["distance"].toInt();
     numNivel = json["level"].toInt();
     numCheckPoint = json["checkpoint"].toInt();
+    arma = json["arma"].toString();
 }
 
 void Jugador::escribir(QJsonObject &json) const
@@ -42,5 +43,6 @@ void Jugador::escribir(QJsonObject &json) const
     json["distance"] = tmpDistancia;
     json["level"] = numNivel;
     json["checkpoint"] = numCheckPoint;
+    json["arma"] = arma;
 }
 

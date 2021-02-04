@@ -1,0 +1,18 @@
+{
+    "ancho": 2445,
+    "enemyList": [
+        {
+            "direccion": 1,
+            "tipoArma": "",
+            "tipoPersonaje": 1
+        },
+        {
+            "direccion": 1,
+            "tipoArma": "",
+            "tipoPersonaje": 1
+        }
+    ],
+    "fondo": ":/levels/bg_1",
+    "numero": 1,
+	"frecuencia":3
+}

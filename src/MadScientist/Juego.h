@@ -28,19 +28,23 @@ public:
     void iniciarJuego();
     void ejecutarPartida();
     void cargarNivel(int nivel);
-
+    void configSlots();
+public slots:
+    void updatePlayerName(QString nombre);
+    void centerCientifico(Cientifico *ply);
+     void changeSceneRect(QRect dimensiones);
 private slots:
 
     void on_btnNewGame_pressed();
     void on_btnLogin_pressed();   
     void on_btnToNamePlayers_pressed();
     void on_btnLoginAuth_pressed();
-    void play();
-    void spawn();
     void on_btnNewGame_2_pressed();
     void on_btnNextPlayer_pressed();
 
-    private:
+    void on_btnLoadSession_pressed();
+
+private:
 
     Ui::Juego *ui;
     QGraphicsScene *scene;

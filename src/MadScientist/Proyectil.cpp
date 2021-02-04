@@ -3,6 +3,7 @@
  */
 
 
+#include "Personaje.h"
 #include "Proyectil.h"
 
 /**
@@ -28,12 +29,14 @@ void Proyectil::mover()
 {
     setPos(x()+5,y());
     QList<QGraphicsItem*> colisiones = this->collidingItems();
-    for (int i = 0; i< colisiones.size(); i++) {
-       if (typeid((*colisiones[i]))== typeid(Enemigo)) {
-           scene()->removeItem(colisiones[i]); // cambiar por animacion
-           scene()->removeItem(this);           
-           //delete colisiones[i];
-           //delete this;
+    for (int i = 0; i< colisiones.size(); i++) {       
+       if (typeid((*colisiones[i]))== typeid(Personaje)) {
+           if (((Personaje*)colisiones[i])->tipoArma == "") {
+               scene()->removeItem(colisiones[i]); // cambiar por animacion
+               scene()->removeItem(this);
+               delete colisiones[i];
+               delete this;
+           }
        }
     }
 }

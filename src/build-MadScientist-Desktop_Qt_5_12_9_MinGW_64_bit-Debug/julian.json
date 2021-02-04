@@ -1,0 +1,25 @@
+{
+    "id": 1,
+    "jugadores": [
+        {
+            "checkpoint": 0,
+            "distance": 0,
+            "level": 2,
+            "name": "Julian",
+            "score": 0,
+            "arma": "gun1"
+        },
+        {
+            "checkpoint": 0,
+            "distance": 0,
+            "level": 2,
+            "name": "Cruz",
+            "score": 0,
+            "arma": "gun2"
+        }		
+    ],
+    "usuario": {
+        "id": 1,
+        "user": "julian"
+    }
+}

@@ -56,6 +56,7 @@ public:
     QLabel *label_9;
     QWidget *scenePage;
     QGraphicsView *gvScene;
+    QLabel *nombreJugador;
 
     void setupUi(QMainWindow *Juego)
     {
@@ -369,12 +370,19 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(gvScene->sizePolicy().hasHeightForWidth());
         gvScene->setSizePolicy(sizePolicy);
+        nombreJugador = new QLabel(scenePage);
+        nombreJugador->setObjectName(QString::fromUtf8("nombreJugador"));
+        nombreJugador->setGeometry(QRect(40, 40, 141, 41));
+        QFont font4;
+        font4.setPointSize(14);
+        nombreJugador->setFont(font4);
+        nombreJugador->setStyleSheet(QString::fromUtf8("background-image: url(:/userInterface/transparent);"));
         navConsole->addWidget(scenePage);
         Juego->setCentralWidget(centralwidget);
 
         retranslateUi(Juego);
 
-        navConsole->setCurrentIndex(3);
+        navConsole->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(Juego);
@@ -401,6 +409,7 @@ public:
         btnLoadSession->setText(QApplication::translate("Juego", "Load Game", nullptr));
         btnNewGame_2->setText(QApplication::translate("Juego", "New Game", nullptr));
         label_9->setText(QString());
+        nombreJugador->setText(QApplication::translate("Juego", "TextLabel", nullptr));
     } // retranslateUi
 
 };

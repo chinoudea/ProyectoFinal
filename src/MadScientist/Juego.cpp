@@ -26,7 +26,8 @@ Juego::Juego(QWidget *parent)
     //scene = new QGraphicsScene();
     ui->gvScene->setSceneRect(0,0,2445,600);
     //ui->gvScene->setScene(scene);
-    //ui->gvScene->centerOn(-400,0);
+    ui->gvScene->centerOn(-150,0);
+
 }
 
 Juego::~Juego()
@@ -51,6 +52,7 @@ void Juego::on_btnNewGame_pressed()
     Usuario guest = *new Usuario();
     // Create new session
     sesion = new Partida(guest);
+    configSlots();
     // Set de maximum number of players.
     ui->txtNumPlayers->setMaximum(sesion->NUM_MAX_PLAYERS);
     // Move to num players screen
@@ -107,6 +109,7 @@ void Juego::on_btnLoginAuth_pressed()
     idUser = dc->authUser(usuario,password);
     if (idUser > 0) {
         qDebug() << "Autenticacion correcta!";
+        user=new Usuario(idUser,usuario);
         //Clear data inputs
         ui->txtUser->setText("");
         ui->txtPass->setText("");
@@ -122,80 +125,55 @@ void Juego::on_btnNewGame_2_pressed()
 {
     // Create new session
     sesion = new Partida(*user);
+    configSlots();
     // Set de maximum number of players.
     ui->txtNumPlayers->setMaximum(sesion->NUM_MAX_PLAYERS);
     // Move to num players screen
     ui->navConsole->setCurrentIndex(2);
 }
-
-void Juego::play() {
-//    //qDebug() << "Entre a mover " << QString::number(scientist->indexPic);
-//    scientist->mover();
-//    ui->gvScene->centerOn(scientist->x()+550,scientist->y());
-//    //Posicion en X del nivel.
-//    navegado = ui->gvScene->mapToScene(ui->gvScene->rect()).boundingRect().x();
-//    //Test
-//    for (int i = 0; i<enemigos.size();i++ ) {
-//        enemigos[i]->mover();
-//    }
-}
-
-void Juego::spawn()
+//Accion de boton CARGAR JUEGO usuario autenticado
+void Juego::on_btnLoadSession_pressed()
 {
-//    //Se crea contador para saber el tiempo en que deben aparecer los enemigos
-//    tiempoEnemigo++;
-//    qDebug() << "Validando si debe crear enemigo";
-//    if (setNivel.contains(tiempoEnemigo)) {
-//        Enemigo * enemigo = new Enemigo();
-//        enemigo->setTipoEnemigo(setNivel.value(tiempoEnemigo));
-//        //Se crea enemigo fuera de escena
-//        enemigo->setPos(navegado+820,0);
-//        enemigo->configPics();
-//        scene->addItem(enemigo);
-//        enemigos.append(enemigo);
-//    }
-
+    // Create new session
+    sesion = new Partida(*user);
+    sesion->loadPartida(Partida::SaveFormat::Json);
+    configSlots();
+    //scientist->
+    // Move to game screen
+    ui->navConsole->setCurrentIndex(5);
+    sesion->iniciarJuego();
 }
 
-//void Juego::iniciarJuego() {
-//    // Set Guest User
-//    user = new Usuario();
-//    ui->gvScene->setBackgroundBrush(QBrush(QImage(":/levels/bg_1")));
-//    // Cientifico
-//    scientist = new Cientifico();
-//    scientist->setPos(-150,0);
-//    scientist->setFlag(QGraphicsItem::ItemIsFocusable);
-//    scientist->setFocus();
-//    scene->addItem(scientist);
-//    scene->setFocusItem(scientist);
-//    // Se configura nivel
-//    setNivel.insert(1,"enemy0");
-//    setNivel.insert(4,"enemy0");
-//    setNivel.insert(7,"enemy0");
-//    setNivel.insert(10,"enemy0");
-//    setNivel.insert(13,"enemy0");
-//    setNivel.insert(16,"enemy0");
 
-//    //Se configuran Timers
-//    timerGame = new QTimer;
-//    connect(timerGame,SIGNAL(timeout()),this,SLOT(play()));
-//    timerGame->start(20);
-//    timerEnemies = new QTimer;
-//    connect(timerEnemies,SIGNAL(timeout()),this,SLOT(spawn()));
-//    timerEnemies->start(5000);
-//}
-
-void Juego::ejecutarPartida() {
-    //Se recorren los jugadores uno a uno, en forma ciclica
-    while (continuar) {
-        for(int i = 0; i < sesion->players.size()-1; i++ ) {
-            cargarNivel(sesion->players[i].numNivel);
-        }
-    }
-}
 
 void Juego::cargarNivel(int nivel){
         //Se configura el rect de la escena
         //Se configura el fondo
-        //Se configuran los enemigos
-    }
+    //Se configuran los enemigos
+}
+
+void Juego::configSlots()
+{
+    connect(sesion, SIGNAL(changePlayer(QString)), this, SLOT(updatePlayerName(QString)));
+    connect(sesion,SIGNAL(changeSceneRect(QRect*)),this,SLOT(changeSceneRect(QRect*)));
+    connect(sesion,SIGNAL(centerPlayer(Cientifico*)),this,SLOT(centerCientifico(Cientifico*)));
+
+
+}
+
+void Juego::updatePlayerName(QString nombre)
+{
+    ui->nombreJugador->setText(nombre);
+}
+
+void Juego::centerCientifico(Cientifico *ply)
+{
+    ui->gvScene->centerOn(ply);
+}
+
+void Juego::changeSceneRect(QRect dimensiones)
+{
+    ui->gvScene->setSceneRect(dimensiones);
+}
+
+
