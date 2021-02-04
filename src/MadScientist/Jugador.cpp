@@ -33,3 +33,14 @@ void Jugador::read(const QJsonObject &json)
     numCheckPoint = json["checkpoint"].toInt();
 }
 
+void Jugador::write(QJsonObject &json) const
+{
+    int tmpPuntaje = puntaje;
+    int tmpDistancia = distanciaRecorrida;
+    json["name"] = nombre;
+    json["score"] = tmpPuntaje;
+    json["distance"] = tmpDistancia;
+    json["level"] = numNivel;
+    json["checkpoint"] = numCheckPoint;
+}
+

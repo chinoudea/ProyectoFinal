@@ -1,0 +1,16 @@
+{
+    "id": 0,
+    "jugadores": [
+        {
+            "checkpoint": 0,
+            "distance": 0,
+            "level": 1,
+            "name": "Carlos",
+            "score": 0
+        }
+    ],
+    "usuario": {
+        "id": 0,
+        "user": "GUEST_42"
+    }
+}
