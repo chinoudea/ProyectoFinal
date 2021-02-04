@@ -18,8 +18,8 @@ public:
     unsigned char numNivel;
     unsigned char numCheckPoint;    
     void guardar();
-    void read(const QJsonObject &json);
-    void write(QJsonObject &json) const;
+    void leer(const QJsonObject &json);
+    void escribir(QJsonObject &json) const;
 };
 
 #endif //_JUGADOR_H

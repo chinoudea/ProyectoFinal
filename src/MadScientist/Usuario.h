@@ -13,8 +13,10 @@ public:
     int id;
     QString usuario;
 
-    void read(const QJsonObject &json);
-    void write(QJsonObject &json) const;
+    void leer(const QJsonObject &json);
+    void escribir(QJsonObject &json) const;
+    QString getUsuario() const;
+
 private:
     QString clave;
     QString guestGenerator();

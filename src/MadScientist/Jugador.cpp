@@ -24,7 +24,7 @@ Jugador::Jugador(QString name)
     numCheckPoint=0;
 }
 
-void Jugador::read(const QJsonObject &json)
+void Jugador::leer(const QJsonObject &json)
 {
     nombre = json["name"].toString();
     puntaje = json["score"].toInt();
@@ -33,7 +33,7 @@ void Jugador::read(const QJsonObject &json)
     numCheckPoint = json["checkpoint"].toInt();
 }
 
-void Jugador::write(QJsonObject &json) const
+void Jugador::escribir(QJsonObject &json) const
 {
     int tmpPuntaje = puntaje;
     int tmpDistancia = distanciaRecorrida;

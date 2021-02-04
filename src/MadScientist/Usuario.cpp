@@ -12,13 +12,18 @@ Usuario::Usuario(int int_id, QString str_user)
     usuario=str_user;
 }
 
-void Usuario::read(const QJsonObject &json)
+QString Usuario::getUsuario() const
+{
+    return usuario;
+}
+
+void Usuario::leer(const QJsonObject &json)
 {
     id = json["id"].toInt();
     usuario = json["user"].toString();
 }
 
-void Usuario::write(QJsonObject &json) const
+void Usuario::escribir(QJsonObject &json) const
 {
     json["id"] = id;
     json["user"] = usuario;

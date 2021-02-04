@@ -28,8 +28,8 @@ public:
     QList<Jugador> players;
     unsigned char numPlayers;
     QTimer * timerGame;
-    void read(const QJsonObject &json);
-    void write(QJsonObject &json) const;
+    void leer(const QJsonObject &json);
+    void escribir(QJsonObject &json) const;
     bool loadPartida(SaveFormat saveFormat);
     bool savePartida(SaveFormat saveFormat) const;
 private slots:

@@ -39,7 +39,7 @@
      <string notr="true">background-image: url(:/userInterface/landing);</string>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="initPage">
      <widget class="QLabel" name="label">

@@ -34,6 +34,9 @@ int Nivel::getAltoNivel() const
 
 void Nivel::leer(const QJsonObject &json)
 {
+    idNivel = json["numero"].toInt();
+    fondo = json["fondo"].toString();
+    anchoNivel = json["ancho"].toInt();
     //Clean the Enemies List
     //listaEnemigos->clear();
     //Capture list of enemies
@@ -53,6 +56,9 @@ void Nivel::leer(const QJsonObject &json)
 
 void Nivel::escribir(QJsonObject &json) const
 {
+    json["numero"]=idNivel;
+    json["fondo"]=fondo;
+    json["ancho"]=anchoNivel;
     //Declare JSON Array for enemies
     QJsonArray enemyArray;
     //Iteration in list of enemies
@@ -64,7 +70,7 @@ void Nivel::escribir(QJsonObject &json) const
         enemyArray.append(enemyObject);
     }
     */
-    json["enemyList"]=enemyArray;
+    //json["enemyList"]=enemyArray;
 
 }
 

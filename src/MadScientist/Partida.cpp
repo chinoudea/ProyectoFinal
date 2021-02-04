@@ -70,41 +70,63 @@ void Partida::iniciarJuego() {
     //    timerEnemies->start(5000);
 }
 
-void Partida::read(const QJsonObject &json)
+void Partida::leer(const QJsonObject &json)
 {
     idPartida = json["id"].toInt();
-    user.read(json["usuario"].toObject());
+    user.leer(json["usuario"].toObject());
     players.clear();
     QJsonArray tmpArray = json["jugadores"].toArray();
     for(int index = 0; index < tmpArray.size(); ++index) {
         QJsonObject objJugador = tmpArray[index].toObject();
         Jugador j;
-        j.read(objJugador);
+        j.leer(objJugador);
         players.append(j);
     }
 }
 
-void Partida::write(QJsonObject &json) const
+void Partida::escribir(QJsonObject &json) const
 {
     json["id"]=idPartida;
     QJsonObject objUsuario;
-    user.write(objUsuario);
+    user.escribir(objUsuario);
     json["usuario"] = objUsuario;
 
     QJsonArray tmpArray;
     for (int index = 0; index < players.size(); ++index) {
         QJsonObject objPlayer;
-        players[index].write(objPlayer);
+        players[index].escribir(objPlayer);
         tmpArray.append(objPlayer);
     }
     json["jugadores"]=tmpArray;
 }
 
+bool Partida::loadPartida(Partida::SaveFormat saveFormat)
+{
+    QFile loadFile(saveFormat == Json
+        ? user.getUsuario()+QStringLiteral(".json")
+        : user.getUsuario()+QStringLiteral(".dat"));
+
+    if (!loadFile.open(QIODevice::ReadOnly)) {
+        qWarning("No se pudo cargar el archivo.");
+        return false;
+    }
+
+    QByteArray saveData = loadFile.readAll();
+
+    QJsonDocument loadDoc(saveFormat == Json
+        ? QJsonDocument::fromJson(saveData)
+        : QJsonDocument::fromBinaryData(saveData));
+
+    leer(loadDoc.object());
+
+    return true;
+}
+
 bool Partida::savePartida(Partida::SaveFormat saveFormat) const
 {
     QFile saveFile(saveFormat == Json
-        ? QStringLiteral("save.json")
-        : QStringLiteral("save.dat"));
+        ? QStringLiteral("niveles/")+user.getUsuario()+QStringLiteral(".json")
+        : user.getUsuario()+QStringLiteral(".dat"));
 
     if (!saveFile.open(QIODevice::WriteOnly)) {
         qWarning("Couldn't open save file.");
@@ -112,7 +134,7 @@ bool Partida::savePartida(Partida::SaveFormat saveFormat) const
     }
 
     QJsonObject objPartida;
-    write(objPartida);
+    escribir(objPartida);
     QJsonDocument saveDoc(objPartida);
     saveFile.write(saveFormat == Json
         ? saveDoc.toJson()

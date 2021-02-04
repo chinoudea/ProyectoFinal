@@ -27,6 +27,7 @@ public:
     // Write level configuration to JSON
     void escribir(QJsonObject &json) const;
 private:
+    int idNivel; //Numero nivel
     QString fondo; //Path de la imagen de fondo
     int anchoNivel; //Dimension de ancho de la escena
     const int altoNivel = 600; //Dimension de alto de la escena
