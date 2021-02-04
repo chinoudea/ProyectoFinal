@@ -13,7 +13,7 @@ SOURCES += \
     Ayuda.cpp \
     Cientifico.cpp \
     DataConnector.cpp \
-    Enemy.cpp \
+    Enemigo.cpp \
     Explosivo.cpp \
     Juego.cpp \
     Jugador.cpp \
@@ -30,7 +30,7 @@ HEADERS += \
     Ayuda.h \
     Cientifico.h \
     DataConnector.h \
-    Enemy.h \
+    Enemigo.h \
     Explosivo.h \
     Juego.h \
     Jugador.h \

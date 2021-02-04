@@ -13,10 +13,13 @@ class Personaje:public QObject,  public QGraphicsPixmapItem {
 
     Q_OBJECT
 public: 
+    enum TipoPersonaje {
+        Cientifico, Cabo, Sargento, Teniente, Coronel
+    };
     /*
      * Constructor
      */
-    Personaje(QGraphicsItem *parent = 0);
+    Personaje();
     /*
      * Atributos del objeto
      */
@@ -34,7 +37,8 @@ public:
     QVector <QString> setPics; //Arreglo de imagenes para movimiento
     unsigned int ubicacion; //Ubicacion en el nivel segun desplazamiento.
     double deltaMoveX, deltaMoveY; //Delta de movimiento
-    unsigned char indexPic;
+    unsigned char indexPic;    
+    const QMap<QString,int> movimientos = {{"walk",14},{"hit",14},{"gethit",10}};
     //Arma arma;
 
     /**
@@ -52,9 +56,15 @@ public:
      */
     void mover();
 
+    void configPics(QString movimiento,QString tipoArma="");
+
+    TipoPersonaje getTipoPersonaje() const;
+    void setTipoPersonaje(const TipoPersonaje &value);
+
 private:
     double g = 1000;
     double pi = 2*acos(0.0);
+    TipoPersonaje tipoPersonaje;
 
 
 

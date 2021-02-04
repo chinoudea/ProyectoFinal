@@ -10,7 +10,7 @@
 #include "Partida.h"
 #include "DataConnector.h"
 #include "Cientifico.h"
-#include "Enemy.h"
+#include "Enemigo.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Juego; }
@@ -25,8 +25,9 @@ public:
     Juego(QWidget *parent = nullptr);
     ~Juego();
     void testFunc();    
-
     void iniciarJuego();
+    void ejecutarPartida();
+    void cargarNivel(int nivel);
 private slots:
 
     void on_btnNewGame_pressed();
@@ -38,7 +39,7 @@ private slots:
     void on_btnNewGame_2_pressed();
     void on_btnNextPlayer_pressed();
 
-private:
+    private:
 
     Ui::Juego *ui;
     QGraphicsScene *scene;
@@ -48,9 +49,10 @@ private:
     QTimer * timerGame;
     QTimer * timerEnemies;
     int navegado;
+    bool continuar=true;
     // Objetos a mover
     Cientifico * scientist;
-    QList<Enemy *> enemigos;
+    QList<Enemigo *> enemigos;
     QMap<int,QString> setNivel;
     int tiempoEnemigo=0;
 };

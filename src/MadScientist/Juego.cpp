@@ -96,6 +96,7 @@ void Juego::on_btnNextPlayer_pressed()
         ui->lblNameMsg->setText("Debe tener mínimo 3 caracteres.");
     } else {
         Jugador tempPlayer = Jugador(txtName);
+
         sesion->players.append(tempPlayer);
         ui->txtNamePlayer->setText("");
         if (sesion->players.size() == sesion->numPlayers) {
@@ -148,11 +149,13 @@ void Juego::play() {
 
 void Juego::spawn()
 {
+    //Se crea contador para saber el tiempo en que deben aparecer los enemigos
     tiempoEnemigo++;
     qDebug() << "Validando si debe crear enemigo";
     if (setNivel.contains(tiempoEnemigo)) {
-        Enemy * enemigo = new Enemy();
+        Enemigo * enemigo = new Enemigo();
         enemigo->setTipoEnemigo(setNivel.value(tiempoEnemigo));
+        //Se crea enemigo fuera de escena
         enemigo->setPos(navegado+820,0);
         enemigo->configPics();
         scene->addItem(enemigo);
@@ -171,4 +174,16 @@ void Juego::on_btnNewGame_2_pressed()
     ui->navConsole->setCurrentIndex(2);
 }
 
+void Juego::ejecutarPartida() {
+    //Se recorren los jugadores uno a uno, en forma ciclica
+    while (continuar) {
+        for(int i = 0; i < sesion->players.size()-1; i++ ) {
+            cargarNivel(sesion->players[i].numNivel);
+        }
+    }
 
+void Juego::cargarNivel(int nivel){
+        //Se configura el rect de la escena
+        //Se configura el fondo
+        //Se configuran los enemigos
+    }

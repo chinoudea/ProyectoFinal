@@ -15,7 +15,7 @@
 /**
  * @param direccion
  */
-Personaje::Personaje(QGraphicsItem *parent)
+Personaje::Personaje()
 {
     direccion = 2;
     indexPic = 0;
@@ -26,11 +26,32 @@ Personaje::Personaje(QGraphicsItem *parent)
     tiempoVuelo=0;
 }
 
+void Personaje::configPics(QString movimiento, QString tipoArma="")
+{
+    setPics.clear();
+    indexPic = 0;
+    for(unsigned char i=0;i<movimientos[movimiento];i++) {
+        setPics.append(":/personaje"+QString::number(tipoPersonaje)+tipoArma+"/"+movimiento+"/"+QString::number(i));
+    }
+    setPixmap(QPixmap(":/personaje"+QString::number(tipoPersonaje)+tipoArma+"/"+movimiento+"/0"));
+}
+
+Personaje::TipoPersonaje Personaje::getTipoPersonaje() const
+{
+    return tipoPersonaje;
+}
+
+void Personaje::setTipoPersonaje(const TipoPersonaje &value)
+{
+    tipoPersonaje = value;
+}
+
+
 void Personaje::mover() {
     //Se valida si hay accion de usuario sobre el personaje.
     switch (accionUsuario) {
-        case 0: //Inercia del movimiento
-            if (velocidadX>0) {
+    case 0: //Inercia del movimiento
+        if (velocidadX>0) {
                 velocidadX-=50;
                 velocidadX = velocidadX < 0 ? 0 : velocidadX;
             } else if (velocidadX<0) {

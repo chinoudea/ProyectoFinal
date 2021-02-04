@@ -15,6 +15,9 @@ public:
     Usuario user;
     QVector<Jugador> players;
     unsigned char numPlayers;
+    bool continuar = true;
+    void ejecutarPartida();
+
 };
 
 #endif //_PARTIDA_H

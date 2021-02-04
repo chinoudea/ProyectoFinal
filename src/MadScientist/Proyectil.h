@@ -11,7 +11,7 @@
 #include <QTimer>
 #include <QDebug>
 #include <QGraphicsScene>
-#include "Enemy.h"
+#include "Enemigo.h"
 
 class Proyectil: public QObject, public QGraphicsPixmapItem
 {
